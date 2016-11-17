@@ -55,8 +55,9 @@
       padding-left: 0;
     }
     .action li {
-      display: inline;
+      display: inline-block;
       margin-right: 0.375em;
+      margin-bottom: 0.75em;
     }
     .yellow .action a {
       background: rgb(255, 196, 12); /* @yellow */
@@ -210,14 +211,10 @@
       color: black;
     }
     .reminder h2 {
-      font-size: 4.5em;
-      text-align: center;
+      font-size: 1.875em;
       max-width: 12em;
       margin-left: auto;
       margin-right: auto;
-    }
-    .reminder h3 {
-      font-size: 2em;
     }
     .reminder ul,
     .reminder li {
@@ -232,8 +229,6 @@
       margin-right: auto;
     }
     .reminder li {
-      padding-right: 1.5em;
-      padding-left: 1.5em;
       padding-bottom: 1.5em;
       border-bottom: 2px solid;
     }
@@ -244,6 +239,9 @@
       display: inline-block;
       padding: 0.375em 0.75em;
     }
+    .reminder label span:first-child {
+      font-weight: bold;
+    }
     .reminder input[type="text"],
     .reminder input[type="email"] {
       font-size: inherit;
@@ -251,6 +249,7 @@
       padding: 0.75em;
       border-width: 0;
       width: 100%;
+      box-sizing: border-box;
     }
     .reminder input[type="checkbox"] {
       font-size: inherit;
@@ -261,6 +260,19 @@
     .reminder button {
       background: rgb(0, 84, 206); /* @blue */
       color: white;
+    }
+    @media (min-width: 60em) {
+      .reminder h2 {
+        font-size: 4.5em;
+        text-align: center;
+      }
+      .reminder h3 {
+        font-size: 2em;
+      }
+      .reminder li {
+        padding-right: 1.5em;
+        padding-left: 1.5em;
+      }
     }
 
     /* =Social
@@ -316,6 +328,8 @@
       margin-right: auto;
       text-align: center;
       margin-bottom: 0;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
     }
     .shows > p {
       color: rgb(151, 154, 170);
@@ -325,6 +339,8 @@
       margin-right: auto;
       text-align: center;
       padding-bottom: 3em;
+      padding-left: 1em;
+      padding-right: 1em;
     }
     .shows > div {
       background: white;
@@ -377,9 +393,15 @@
     .playing strong {
       margin: 0;
       font-family: "Cactus W00", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 9.375em; /* 150px / 16px */
+      font-size: 5em;
       line-height: 1;
       text-transform: uppercase;
+    }
+    @media (min-width: 60em) {
+      .shows h4,
+      .playing strong {
+        font-size: 9.375em; /* 150px / 16px */
+      }
     }
     .shows h4.coming-soon {
       color: rgb(221, 221, 221);
