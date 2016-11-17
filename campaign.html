@@ -179,6 +179,10 @@
       height: 5em;
     }
     @media (min-width: 60em) {
+      header {
+        padding-left: 9em;
+        padding-right: 9em;
+      }
       header h1 img {
         height: 10.625em;
       }
@@ -194,6 +198,7 @@
       }
       header .countdown {
         top: 3em;
+        right: 9em;
       }
     }
     header .countdown h2 {
@@ -212,9 +217,16 @@
       margin-right: auto;
       margin-bottom: 0;
     }
+    header p span {
+      display: inline-block;
+    }
     @media (min-width: 60em) {
       header p {
         font-size: 2em;
+        position: absolute;
+        left: 50%;
+        top: 1.5em;
+        transform: translateX(-50%);
       }
     }
     header h2 {
@@ -245,12 +257,16 @@
     /* =Video
     ----------------------------------------------- */
     .video {
-      width: 67.25em; /* 1076px */
       max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
       margin-top: 1.5em;
       margin-bottom: 1.5em;
+    }
+    @media (min-width: 60em) {
+      .video {
+        margin-top: 3em;
+        margin-left: 6em;
+        margin-right: 6em;
+      }
     }
     .video > div {
       max-width: 100%;
@@ -263,6 +279,20 @@
       left: 0;
       width: 100%;
       height: 100%;
+    }
+    .video > div::before {
+      content: "";
+      display: block;
+      background: transparent url(images/shapes/clouds.svg) no-repeat;
+      width: 5.752em;
+      height: 3.143em;
+    }
+    .video > div::after {
+      content: "";
+      display: block;
+      background: transparent url(images/shapes/corner.svg) no-repeat;
+      width: 3.525em;
+      height: 3.645em;
     }
 
     /* =Reminder
@@ -389,13 +419,15 @@
     .shows > h2 {
       font-size: 3em;
       max-width: 33em;
-      margin-top: 1.5em;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
       margin-bottom: 0;
       padding-left: 0.5em;
       padding-right: 0.5em;
+    }
+    .shows > h2 span {
+      display: inline-block;
     }
     .shows > p {
       color: rgb(151, 154, 170);
@@ -520,7 +552,7 @@
     <h1>
       <img src="images/goodfest.svg" height="170" alt="GOODFest" />
     </h1>
-    <p>A livestream festival for good. Presented by Pixel, Phone by Google</p>
+    <p>A livestream festival for good. <span>Presented by Pixel, Phone by Google</span></p>
 
     <div class="countdown">
       <h2>Next show in</h2>
@@ -552,7 +584,7 @@
   </div>
 
   <section class="shows">
-    <h2>5 shows. 5 cities. 5 causes.</h2>
+    <h2><span>5 shows.</span> <span>5 cities.</span> <span>5 causes.</span></h2>
     <p>GOOD and Pixel, a phone by Google, are teaming up on the first ever GOODFest, a celebration of progress, positivity, and the power of people to push the world forward. In five livestreamed shows, we’re bringing together music, community, and technology to raise funds and connect with fans across the world.</p>
 
     <div>
@@ -725,7 +757,7 @@
     <h3><img src="images/good.svg" alt="GOOD" width="60" /></h3>
     <ul>
       <li><a href="https://www.good.is/about/contact">Contact</a></li>
-      <li><a href="">Press</a></li>
+      <li><a href="http://www.goodinc.com/news/press">Press</a></li>
       <li><a href="https://www.good.is/about/terms">Terms &amp; Conditions</a></li>
     </ul>
     <p>© 2016 GOOD Worldwide</p>
