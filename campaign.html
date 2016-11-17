@@ -6,17 +6,43 @@
   <title>GOODFest</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono" />
-  <link rel="stylesheet" href="//fast.fonts.net/cssapi/90991e22-dfdb-45f4-a551-692df838149c.css" />
+  <link rel="stylesheet" href="https://fast.fonts.net/cssapi/90991e22-dfdb-45f4-a551-692df838149c.css" />
   <style>
+
+    /*
+     * Legal Disclaimer
+     *
+     * These Fonts are licensed only for use on these domains and their subdomains:
+     * good.is
+     *
+     * It is illegal to download or use them on other websites.
+     *
+     * While the @font-face statements below may be modified by the client, this
+     * disclaimer may not be removed.
+     *
+     * Lineto.com, 2016
+     */
+    @font-face {
+      font-family: "Circular Book";
+      src: url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.eot");
+      src: url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.eot?#iefix") format("embedded-opentype"),
+           url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.woff2") format("woff2"),
+           url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.woff") format("woff");
+      font-weight: normal;
+      font-style: normal;
+    }
 
     /* =Elements
     ----------------------------------------------- */
     body {
-      font: 100%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font: 100%/1.5 "Circular Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
       background: black;
       color: white;
       margin: 0;
       padding: 0;
+    }
+    h1, h2, h3, h4, h5, h6, strong, b {
+      font-weight: inherit;
     }
     .ad img {
       max-width: 100%;
@@ -138,18 +164,58 @@
     ----------------------------------------------- */
     header {
       text-align: center;
+      position: relative;
+      padding-top: 1.5em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
     }
     header h1 {
-      padding-top: 3em;
+      margin: 0;
       font-size: inherit;
       line-height: inherit;
+      text-align: left;
+    }
+    header h1 img {
+      height: 5em;
+    }
+    @media (min-width: 60em) {
+      header h1 img {
+        height: 10.625em;
+      }
+    }
+    header .countdown {
+      position: absolute;
+      top: 2em;
+      right: 1.5em;
+    }
+    @media (min-width: 60em) {
+      header {
+        padding-top: 3.75em;
+      }
+      header .countdown {
+        top: 3em;
+      }
+    }
+    header .countdown h2 {
+      margin-top: 0;
+    }
+    @media (max-width: 60em) {
+      header .countdown h2,
+      header .countdown dl {
+        font-size: 0.875em;
+      }
     }
     header p {
-      font-size: 2em;
       max-width: 40em;
       text-align: center;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 0;
+    }
+    @media (min-width: 60em) {
+      header p {
+        font-size: 2em;
+      }
     }
     header h2 {
       color: rgb(219, 50, 54);
@@ -170,9 +236,10 @@
       font-size: 0.875em;
     }
     header dl {
+      margin: 0;
       display: inline-block;
       vertical-align: top;
-      min-width: 3.5em;
+      min-width: 3em;
     }
 
     /* =Video
@@ -182,8 +249,8 @@
       max-width: 100%;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 3em;
-      margin-bottom: 3em;
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
     }
     .video > div {
       max-width: 100%;
@@ -240,7 +307,6 @@
       padding: 0.375em 0.75em;
     }
     .reminder label span:first-child {
-      font-weight: bold;
     }
     .reminder input[type="text"],
     .reminder input[type="email"] {
@@ -447,34 +513,35 @@
 </head>
 <body>
   <div class="ad">
-    <img src="//placehold.it/728x90" width="728" height="90" alt="Introducing Pixel Phone by Google. Only on Verizon. Learn more." />
+    <img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=728×90&w=728&h=90" width="728" height="90" alt="Introducing Pixel Phone by Google. Only on Verizon. Learn more." />
   </div>
 
   <header>
     <h1>
-      <img src="images/good.svg" height="75" alt="GOOD" /><br />
-      <img src="images/fest.svg" height="75" alt="Fest" />
+      <img src="images/goodfest.svg" height="170" alt="GOODFest" />
     </h1>
     <p>A livestream festival for good. Presented by Pixel, Phone by Google</p>
 
-    <h2>Next show in</h2>
-    <div>
-      <dl>
-        <dt>02</dt>
-        <dd>Days</dd>
-      </dl>
-      <dl>
-        <dt>42</dt>
-        <dd><abbr title="Hours">Hrs</abbr></dd>
-      </dl>
-      <dl>
-        <dt>06</dt>
-        <dd><abbr title="Minutes">Min</abbr></dd>
-      </dl>
-      <dl>
-        <dt>02</dt>
-        <dd><abbr title="Seconds">Sec</abbr></dd>
-      </dl>
+    <div class="countdown">
+      <h2>Next show in</h2>
+      <div>
+        <dl>
+          <dt>02</dt>
+          <dd>Days</dd>
+        </dl>
+        <dl>
+          <dt>42</dt>
+          <dd><abbr title="Hours">Hrs</abbr></dd>
+        </dl>
+        <dl>
+          <dt>06</dt>
+          <dd><abbr title="Minutes">Min</abbr></dd>
+        </dl>
+        <dl>
+          <dt>02</dt>
+          <dd><abbr title="Seconds">Sec</abbr></dd>
+        </dl>
+      </div>
     </div>
   </header>
 
@@ -655,11 +722,11 @@
 
   <footer>
     <h2>Presented by Pixel, Phone by Google</h2>
-    <h3>GOOD</h3>
+    <h3><img src="images/good.svg" alt="GOOD" width="60" /></h3>
     <ul>
-      <li><a href="">Contact</a></li>
+      <li><a href="https://www.good.is/about/contact">Contact</a></li>
       <li><a href="">Press</a></li>
-      <li><a href="">Terms &amp; Conditions</a></li>
+      <li><a href="https://www.good.is/about/terms">Terms &amp; Conditions</a></li>
     </ul>
     <p>© 2016 GOOD Worldwide</p>
   </footer>
