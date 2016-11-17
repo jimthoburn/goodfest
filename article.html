@@ -1302,6 +1302,34 @@ START GOODFEST HEADER
     .goodfest-shows .location {
       font-size: 1.25em;
     }
+
+
+    /* =Article Navigation
+    ----------------------------------------------- */
+    .goodfest-nav ul,
+    .goodfest-nav li {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .goodfest-nav ul:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .goodfest-nav li {
+      float: right;
+      width: 50%;
+    }
+    .goodfest-nav li a {
+      display: block;
+      background-color: rgb(0, 84, 206); /* @blue */
+      color: white;
+      padding: 0.75em 1.5em;
+    }
+    .goodfest-nav li.next a {
+      text-align: right;
+    }
   </style>
 
   <style>
@@ -3928,6 +3956,12 @@ START GOODFEST FOOTER
 **************************
 -->
 
+  <nav class="goodfest goodfest-nav">
+    <ul>
+      <li class="next"><a href=""><strong>Next:</strong> Recap: Watch GOODFest New York</a></li>
+      <li class="previous"><a href=""><strong>Previous:</strong> Interview with Glass Animals</a></li>
+    </ul>
+  </nav>
 
 
   <div class="goodfest goodfest-ad">
