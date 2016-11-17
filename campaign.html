@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GOODFest</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono" />
+  <link rel="stylesheet" href="//fast.fonts.net/cssapi/90991e22-dfdb-45f4-a551-692df838149c.css" />
+  <style>
+
+    /* =Elements
+    ----------------------------------------------- */
+    body {
+      font: 100%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: black;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    .ad img {
+      max-width: 100%;
+      height: auto;
+    }
+    body a {
+      color: inherit;
+    }
+    .action a,
+    button {
+      background: rgb(204, 204, 204);
+      padding: 0.75em 1.5em;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0.375em 0.375em 0 black;
+      border-width: 0;
+      font-size: inherit;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+    .action a:hover,
+    .action a:active,
+    .action a:focus,
+    button:hover,
+    button:active,
+    button:focus {
+      box-shadow: 0 0 0 black;
+    }
+    .action ul,
+    .action li {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .action li {
+      display: inline;
+    }
+    .yellow .action a {
+      background: rgb(255, 196, 12); /* @yellow */
+    }
+    .red .action a {
+      background: rgb(241, 97, 77); /* @red */
+    }
+    .blue .action a {
+      background: rgb(0, 84, 206); /* @blue */
+    }
+    .green .action a {
+      background: rgb(0, 174, 113); /* @green */
+    }
+    .pink .action a {
+      background: rgb(247, 170, 179); /* @pink */
+    }
+
+    /* =Ad
+    ----------------------------------------------- */
+    .ad {
+      padding: 1.5em;
+      background-color: rgb(232, 232, 232);
+      color: black;
+      text-align: center;
+    }
+
+    /* =Header
+    ----------------------------------------------- */
+    header {
+      text-align: center;
+    }
+    header h1 {
+      padding-top: 3em;
+      font-size: inherit;
+      line-height: inherit;
+    }
+    header p {
+      font-size: 2em;
+      max-width: 40em;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    header h2 {
+      color: rgb(219, 50, 54);
+      text-transform: uppercase;
+      font-size: 2em;
+      margin-bottom: 0;
+    }
+    header dt {
+      margin-top: 0;
+      font-family: "Space Mono", monospace;
+      font-size: 1.875em;
+    }
+    header dd {
+      color: rgb(0, 84, 206); /* @blue */
+      margin-left: 0;
+      padding-left: 0;
+      text-transform: uppercase;
+      font-size: 0.875em;
+    }
+    header dl {
+      display: inline-block;
+      vertical-align: top;
+      min-width: 3.5em;
+    }
+
+    /* =Video
+    ----------------------------------------------- */
+    .video {
+      width: 67.25em; /* 1076px */
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 3em;
+      margin-bottom: 3em;
+    }
+    .video > div {
+      max-width: 100%;
+      padding-bottom: 56.25%; /* 720px / 1280px */
+      position: relative;
+    }
+    .video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* =Reminder
+    ----------------------------------------------- */
+    .reminder,
+    .social,
+    footer {
+      padding: 1.5em;
+    }
+    .reminder,
+    .social {
+      background-color: rgb(247, 170, 179); /* @pink */
+      color: black;
+    }
+    .reminder h2 {
+      font-size: 4.5em;
+    }
+    .reminder h3 {
+      font-size: 2em;
+    }
+    .reminder ul,
+    .reminder li {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .reminder li em {
+      font-style: normal;
+      background: white;
+      color: black;
+      display: inline-block;
+      padding: 0.375em 0.75em;
+    }
+
+    /* =Shows
+    ----------------------------------------------- */
+    .shows > h2 {
+      font-size: 3em;
+      max-width: 33em;
+      margin-top: 1.5em;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    .shows > p {
+      color: rgb(151, 154, 170);
+      font-size: 1.5em;
+      max-width: 40em;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      padding-bottom: 3em;
+    }
+    .shows > div {
+      background: white;
+      color: black;
+      padding: 1.5em;
+    }
+    .shows ol,
+    .shows li {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .shows ol {
+      max-width: 40em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .shows h3 {
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+    .shows h5 {
+      font-family: inherit;
+      font-weight: inherit;
+      font-size: 0.875em;
+    }
+    .shows li + li {
+      margin-top: 3em;
+    }
+    .shows h3 {
+      color: rgb(153, 153, 153);
+    }
+    .shows .yellow h3 {
+      color: rgb(255, 196, 12); /* @yellow */
+    }
+    .shows .red h3 {
+      color: rgb(241, 97, 77); /* @red */
+    }
+    .shows .blue h3 {
+      color: rgb(0, 84, 206); /* @blue */
+    }
+    .shows .green h3 {
+      color: rgb(0, 174, 113); /* @green */
+    }
+    .shows .pink h3 {
+      color: rgb(247, 170, 179); /* @pink */
+    }
+
+    .shows h4,
+    .playing strong {
+      margin: 0;
+      font-family: "Cactus W00", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 9.375em; /* 150px / 16px */
+      line-height: 1;
+      text-transform: uppercase;
+    }
+    .shows .location,
+    .playing span {
+      padding-bottom: 0.375em;
+      border-bottom: 3px solid;
+      margin-bottom: 0.375em;
+    }
+    .shows .location {
+      padding-top: 0.375em;
+      border-top: 3px solid;
+    }
+    .playing span {
+      display: block;
+      text-transform: uppercase;
+      font-size: 1.875em; /* 30px / 16px */
+    }
+    .playing strong {
+      display: block;
+      color: rgb(153, 153, 153);
+    }
+    .shows .yellow .playing strong {
+      color: rgb(255, 196, 12); /* @yellow */
+    }
+    .shows .red .playing strong {
+      color: rgb(241, 97, 77); /* @red */
+    }
+    .shows .blue .playing strong {
+      color: rgb(0, 84, 206); /* @blue */
+    }
+    .shows .green .playing strong {
+      color: rgb(0, 174, 113); /* @green */
+    }
+    .shows .pink .playing strong {
+      color: rgb(247, 170, 179); /* @pink */
+    }
+    .shows .location {
+      font-size: 1.25em;
+    }
+  </style>
+</head>
+<body>
+  <div class="ad">
+    <img src="//placehold.it/728x90" width="728" height="90" alt="Introducing Pixel Phone by Google. Only on Verizon. Learn more." />
+  </div>
+
+  <header>
+    <h1>
+      <img src="images/good.svg" height="75" alt="GOOD" /><br />
+      <img src="images/fest.svg" height="75" alt="Fest" />
+    </h1>
+    <p>A livestream festival for good. Presented by Pixel, Phone by Google</p>
+
+    <h2>Next show in</h2>
+    <div>
+      <dl>
+        <dt>02</dt>
+        <dd>Days</dd>
+      </dl>
+      <dl>
+        <dt>42</dt>
+        <dd><abbr title="Hours">Hrs</abbr></dd>
+      </dl>
+      <dl>
+        <dt>06</dt>
+        <dd><abbr title="Minutes">Min</abbr></dd>
+      </dl>
+      <dl>
+        <dt>02</dt>
+        <dd><abbr title="Seconds">Sec</abbr></dd>
+      </dl>
+    </div>
+  </header>
+
+  <div class="video">
+    <div>
+      <iframe width="1280" height="720" src="https://www.youtube.com/embed/D6DKA3m2xOo" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <section class="shows">
+    <h2>5 shows. 5 cities. 5 causes.</h2>
+    <p>GOOD and Pixel, a phone by Google, are teaming up on the first ever GOODFest, a celebration of progress, positivity, and the power of people to push the world forward. In five livestreamed shows, we’re bringing together music, community, and technology to raise funds and connect with fans across the world.</p>
+
+    <div>
+      <ol>
+        <li class="yellow">
+          <img src="images/shows/dance.gif" alt="" width="250" />
+          <h3><abbr title="November">Nov</abbr> 29</h3>
+          <p class="location"><abbr title="at">@</abbr> BAM Cafe, New York City</p>
+
+          <h4>Glass Animals</h4>
+
+          <p class="playing"><span>Playing for</span> <strong>Generosity</strong></p>
+
+          <div class="action">
+            <h5>RSVP now</h5>
+            <ul>
+              <li><a href="">Buy Tickets</a></li>
+              <li><a href="">Set livestream reminder</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="red">
+          <img src="images/shows/rainbow.png" alt="" width="250" />
+          <h3><abbr title="December">Dec</abbr> 9</h3>
+          <p class="location"><abbr title="at">@</abbr> Music Box, New Orleans</p>
+
+          <h4>Gogol Bordello</h4>
+
+          <p class="playing"><span>Playing for</span> <strong>Humanity</strong></p>
+
+          <p class="featuring">Featuring Nick Zinner and special guests</p>
+
+          <div class="action">
+            <h5>RSVP now</h5>
+            <ul>
+              <li><a href="">Buy Tickets</a></li>
+              <li><a href="">Set livestream reminder</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="blue">
+          <img src="images/shows/summersault.png" alt="" width="250" />
+          <h3><abbr title="December">Dec</abbr> 12</h3>
+          <p class="location"><abbr title="at">@</abbr> Neumo’s, Seattle</p>
+
+          <h4>Young the Giant</h4>
+
+          <p class="playing"><span>Playing for</span> <strong>Earth</strong></p>
+
+          <div class="action">
+            <h5>RSVP now</h5>
+            <ul>
+              <li><a href="">Buy Tickets</a></li>
+              <li><a href="">Set livestream reminder</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="green">
+          <img src="images/shows/window.png" alt="" width="250" />
+          <h3><abbr title="December">Dec</abbr> 18</h3>
+          <p class="location"><abbr title="at">@</abbr> Great American Music Hall, San Francisco</p>
+
+          <h4>Coming Soon</h4>
+
+          <p class="playing"><span>Playing for</span> <strong>Equality</strong></p>
+
+          <div class="action">
+            <h5>RSVP now</h5>
+            <ul>
+              <li><a href="">Sign up for announcement</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="pink">
+          <img src="images/shows/door.png" alt="" width="250" />
+          <h3><abbr title="December">Dec</abbr> 21</h3>
+          <p class="location"><abbr title="at">@</abbr> Ace Hotel Theatre, Los Angeles</p>
+
+          <h4>Coming Soon</h4>
+
+          <p class="playing"><span>Playing for</span> <strong>Love</strong></p>
+
+          <div class="action">
+            <h5>RSVP now</h5>
+            <ul>
+              <li><a href="">Sign up for announcement</a></li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="ad">
+    <h2>Stay tuned for photos and videos from each show, captured by Pixel.</h2>
+
+    <img src="images/ad-970x250.jpg" width="970" height="250" alt="Introducing Pixel Phone by Google. Only on Verizon. Learn more." />
+  </div>
+
+  <section class="reminder">
+    <h2>Set your livestream reminder for GOODFest</h2>
+    <ul>
+      <li>
+        <h3>Remind me by phone</h3>
+        <p>Text <em>goodtime</em> to 555555 and we’ll text the link at showtime.</p>
+      </li>
+      <li>
+        <h3>Remind me by email</h3>
+        <p>Join the email list and we’ll send you an email at showtime.</p>
+
+        <form action="" method="post">
+          <p class="email">
+            <label>
+              <span>Enter your email address</span><br />
+              <input type="email" />
+            </label>
+          </p>
+          <p class="checkbox">
+            <label>
+              <input type="checkbox" />
+              Join the Daily GOOD
+            </label>
+          </p>
+          <p class="submit">
+            <button type="submit">Sign Up</button>
+          </p>
+        </form>
+      </li>
+    </ul>
+  </section>
+
+  <section class="social">
+    <h2>Social</h2>
+    <ul>
+      <li><a href="https://twitter.com/good">Twitter</a></li>
+      <li><a href="https://www.facebook.com/GOODHQ">Facebook</a></li>
+      <li><a href="https://www.instagram.com/goodhq/">Instagram</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <h2>Presented by Pixel, Phone by Google</h2>
+    <h3>GOOD</h3>
+    <ul>
+      <li><a href="">Contact</a></li>
+      <li><a href="">Press</a></li>
+      <li><a href="">Terms &amp; Conditions</a></li>
+    </ul>
+    <p>© 2016 GOOD Worldwide</p>
+  </footer>
+
+</body>
+</html>
