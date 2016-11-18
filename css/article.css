@@ -138,8 +138,14 @@
   padding: 20px;
 }
 .content-area .goodfest-header {
-  margin-left: -60px;
-  margin-right: -60px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+@media (min-width: 700px) {
+  .content-area .goodfest-header {
+    margin-left: -60px;
+    margin-right: -60px;
+  }
 }
 .goodfest-header h1 {
   margin: 0;
