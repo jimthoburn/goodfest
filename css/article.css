@@ -1,0 +1,486 @@
+
+/*
+ * Legal Disclaimer
+ *
+ * These Fonts are licensed only for use on these domains and their subdomains:
+ * good.is
+ *
+ * It is illegal to download or use them on other websites.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2016
+ */
+@font-face {
+  font-family: "GOODFest Circular Book";
+  src: url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.eot");
+  src: url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.eot?#iefix") format("embedded-opentype"),
+       url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.woff2") format("woff2"),
+       url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.goodfest {
+  font: 100%/1.5 "GOODFest Circular Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.goodfest a {
+  color: inherit;
+}
+
+.goodfest h1,
+.goodfest h2,
+.goodfest h3,
+.goodfest h4,
+.goodfest h5,
+.goodfest h6,
+.goodfest strong,
+.goodfest b {
+  font-weight: inherit;
+  font-family: inherit;
+}
+.goodfest-ad img {
+  max-width: 100%;
+  height: auto;
+}
+
+.goodfest-shows .action a,
+.goodfest-reminder button {
+  background: rgb(204, 204, 204);
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0.375em 0.375em 0 black;
+  border-width: 0;
+  font-size: inherit;
+  font-family: inherit;
+  transition: all 0.2s;
+  cursor: pointer;
+  width: auto;
+}
+.goodfest-reminderbutton {
+  font-size: 1.25em;
+}
+.goodfest-shows .action a:hover,
+.goodfest-shows .action a:active,
+.goodfest-shows .action a:focus,
+.goodfest-reminder button:hover,
+.goodfest-reminder button:active,
+.goodfest-reminder button:focus {
+  box-shadow: 0 0 0 black;
+}
+.goodfest-shows .action ul,
+.goodfest-shows .action li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.goodfest-shows .action li {
+  display: inline-block;
+  margin-right: 0.375em;
+  margin-bottom: 0.75em;
+}
+.goodfest-shows .yellow .action a {
+  background: rgb(255, 196, 12); /* @yellow */
+}
+.goodfest-shows .red .action a {
+  background: rgb(241, 97, 77); /* @red */
+}
+.goodfest-shows .blue .action a {
+  background: rgb(0, 84, 206); /* @blue */
+  background: rgb(0, 94, 229); /* @light-blue */
+}
+.goodfest-shows .green .action a {
+  background: rgb(0, 174, 113); /* @green */
+}
+.goodfest-shows .pink .action a {
+  background: rgb(247, 170, 179); /* @pink */
+}
+
+/* =Ad
+----------------------------------------------- */
+.goodfest-ad {
+  padding: 1.5em;
+  text-align: center;
+  background: black;
+  color: white;
+  padding-top: 3em;
+  padding-bottom: 3.75em;
+  background-image: url(../images/color-bars.png);
+  background-size: 243px auto;
+}
+.goodfest-ad h2 {
+  margin-top: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: inherit;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+
+/* =Header
+----------------------------------------------- */
+.goodfest-header {
+  background: black;
+  color: white;
+  text-align: center;
+  position: relative;
+  padding-top: 1.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+.goodfest-header h1 {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: left;
+}
+.goodfest-header h1 img {
+  height: 5em;
+}
+@media (min-width: 60em) {
+  .goodfest-header {
+    padding-left: 9em;
+    padding-right: 9em;
+  }
+  .goodfest-header h1 img {
+    height: 10.625em;
+  }
+}
+.goodfest-header .countdown {
+  position: absolute;
+  top: 2em;
+  right: 1.5em;
+}
+@media (min-width: 60em) {
+  .goodfest-header {
+    padding-top: 3.75em;
+  }
+  .goodfest-header .countdown {
+    top: 3em;
+    right: 9em;
+  }
+}
+.goodfest-header .countdown h2 {
+  margin-top: 0;
+}
+@media (max-width: 60em) {
+  .goodfest-header .countdown h2,
+  .goodfest-header .countdown dl {
+    font-size: 0.875em;
+  }
+}
+.goodfest-header p {
+  max-width: 40em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+.goodfest-header p span {
+  display: inline-block;
+}
+@media (min-width: 60em) {
+  .goodfest-header p {
+    font-size: 2em;
+    position: absolute;
+    left: 50%;
+    top: 1.5em;
+    transform: translateX(-50%);
+  }
+}
+.goodfest-header h2 {
+  color: rgb(219, 50, 54);
+  text-transform: uppercase;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+.goodfest-header dt {
+  margin-top: 0;
+  font-family: "Space Mono", monospace;
+  font-size: 1.875em;
+}
+.goodfest-header dd {
+  color: rgb(0, 84, 206); /* @blue */
+  margin-left: 0;
+  padding-left: 0;
+  text-transform: uppercase;
+  font-size: 0.875em;
+}
+.goodfest-header dl {
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 3em;
+}
+
+
+/* =Video
+----------------------------------------------- */
+@media (min-width: 1200px) {
+  .goodfest-video {
+    position: absolute;
+    right: 30px;
+    margin-top: -30px;
+  }
+}
+
+/* =Reminder
+----------------------------------------------- */
+.goodfest-reminder,
+.goodfest-social,
+footer {
+  padding: 1.5em;
+}
+.goodfest-reminder,
+.goodfest-social {
+  background-color: rgb(247, 170, 179); /* @pink */
+  color: black;
+}
+.goodfest-reminder h2 {
+  font-size: 1.875em;
+  max-width: 12em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.goodfest-reminder h3 {
+  margin-bottom: 0;
+}
+.goodfest-reminder .email {
+  margin-top: 3em;
+  margin-bottom: 0;
+}
+.goodfest-reminder .email label > span:first-child {
+  display: block;
+  margin-bottom: 0.375em;
+}
+.goodfest-reminder .email label br {
+  display: none;
+}
+.goodfest-reminder .checkbox {
+  margin-top: 0.375em;
+}
+.goodfest-reminder ul,
+.goodfest-reminder li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.goodfest-reminder ul {
+  margin-top: 1.5em;
+  border-top: 2px solid;
+  padding-top: 1.5em;
+  max-width: 45em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.goodfest-reminder li {
+  padding-bottom: 1.5em;
+  border-bottom: 2px solid;
+  margin-bottom: 1.5em;
+}
+.goodfest-reminder li em {
+  font-style: normal;
+  background: white;
+  color: black;
+  display: inline-block;
+  padding: 0.375em 0.75em;
+}
+.goodfest-reminder label span:first-child {
+}
+.goodfest-reminder input[type="text"],
+.goodfest-reminder input[type="email"] {
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.75em;
+  border-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.goodfest-reminder input[type="checkbox"] {
+  font-size: inherit;
+}
+.goodfest-reminder .submit {
+  text-align: right;
+}
+.goodfest-reminder button {
+  background: white;
+  color: black;
+}
+@media (min-width: 60em) {
+  .goodfest-reminder h2 {
+    font-size: 4.5em;
+    text-align: center;
+  }
+  .goodfest-reminder h3 {
+    font-size: 2em;
+  }
+  .goodfest-reminder li {
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+  }
+}
+
+/* =Social
+----------------------------------------------- */
+.goodfest-social h2 {
+  /* @hidden-accessible */
+  position: absolute;
+  left: -9999px;
+}
+.goodfest-social ul,
+.goodfest-social li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.goodfest-social ul {
+  text-align: center;
+  margin-bottom: 3em;
+}
+.goodfest-social li {
+  display: inline;
+  margin-left: 0.375em;
+  margin-right: 0.375em;
+  font-size: 1.5em;
+}
+@media (min-width: 60em) {
+  .goodfest-social li {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+}
+.goodfest-social li a {
+  display: inline-block;
+  padding: 0.75em;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+.goodfest-social li a:hover,
+.goodfest-social li a:active,
+.goodfest-social li a:focus {
+  background-color: rgb(0, 84, 206); /* @blue */
+}
+.goodfest-social li svg {
+  display: block;
+}
+.goodfest-social li svg path {
+  fill: currentColor;
+}
+
+/* =Shows
+----------------------------------------------- */
+.goodfest-shows {
+  margin-top: 30px;
+}
+.goodfest-shows > h2 {
+  margin: 0;
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.goodfest-shows > h2 span {
+  display: inline-block;
+}
+.goodfest-shows > p {
+  color: rgb(151, 154, 170);
+  font-size: 1.5em;
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.goodfest-shows > div {
+  background: white;
+  color: black;
+  padding: 1.5em;
+}
+.goodfest-shows ol,
+.goodfest-shows li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.goodfest-shows ol {
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.goodfest-shows h3 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.goodfest-shows h5 {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 0.875em;
+}
+.goodfest-shows ol > li + li {
+  margin-top: 3em;
+}
+.goodfest-shows h3 {
+  color: rgb(153, 153, 153);
+}
+.goodfest-shows .yellow h3 {
+  color: rgb(255, 196, 12); /* @yellow */
+}
+.goodfest-shows .red h3 {
+  color: rgb(241, 97, 77); /* @red */
+}
+.goodfest-shows .blue h3 {
+  color: rgb(0, 84, 206); /* @blue */
+}
+.goodfest-shows .green h3 {
+  color: rgb(0, 174, 113); /* @green */
+}
+.goodfest-shows .pink h3 {
+  color: rgb(247, 170, 179); /* @pink */
+}
+
+.goodfest-shows h4 {
+  margin: 0;
+  font-family: "Cactus W00", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 5em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.goodfest-shows .artist.coming-soon {
+  color: rgb(153, 153, 153);
+}
+.goodfest-shows .location {
+  padding-bottom: 0.375em;
+  border-bottom: 3px solid;
+  margin-bottom: 0.375em;
+}
+.goodfest-shows .location {
+  padding-top: 0.375em;
+  border-top: 3px solid;
+}
+.goodfest-shows .yellow h4 {
+  color: rgb(255, 196, 12); /* @yellow */
+}
+.goodfest-shows .red h4 {
+  color: rgb(241, 97, 77); /* @red */
+}
+.goodfest-shows .blue h4 {
+  color: rgb(0, 84, 206); /* @blue */
+}
+.goodfest-shows .green h4 {
+  color: rgb(0, 174, 113); /* @green */
+}
+.goodfest-shows .pink h4 {
+  color: rgb(247, 170, 179); /* @pink */
+}
+.goodfest-shows .location {
+  font-size: 1.25em;
+}
+
