@@ -209,33 +209,33 @@
     font-size: 2em;
     position: absolute;
     left: 50%;
-    top: 1.5em;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 .goodfest-header h2 {
   color: rgb(219, 50, 54);
   text-transform: uppercase;
-  font-size: 2em;
+  font-size: 1.5em;
   margin-bottom: 0;
+}
+.goodfest-header dl {
+  margin: 0.375em 0 0;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 3em;
 }
 .goodfest-header dt {
   margin-top: 0;
   font-family: "Space Mono", monospace;
-  font-size: 1.875em;
+  font-size: 1.25em;
 }
 .goodfest-header dd {
   color: rgb(0, 84, 206); /* @blue */
   margin-left: 0;
   padding-left: 0;
   text-transform: uppercase;
-  font-size: 0.875em;
-}
-.goodfest-header dl {
-  margin: 0;
-  display: inline-block;
-  vertical-align: top;
-  min-width: 3em;
+  font-size: 0.75em;
 }
 
 
