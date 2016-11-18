@@ -62,7 +62,7 @@
 .goodfest-shows .action a {
   padding: 0.375em 0.75em;
 }
-.goodfest-reminderbutton {
+.goodfest-reminder button {
   font-size: 1.25em;
 }
 .goodfest-shows .action a:hover,
@@ -80,7 +80,8 @@
   padding-left: 0;
 }
 .goodfest-shows .action ul {
-  margin-top: 0.75em;
+  margin-top: 0.375em;
+  font-size: 0.75em;
 }
 .goodfest-shows .action li {
   display: inline-block;
@@ -259,8 +260,7 @@
 /* =Reminder
 ----------------------------------------------- */
 .goodfest-reminder,
-.goodfest-social,
-footer {
+.goodfest-social {
   padding: 1.5em;
 }
 .goodfest-reminder,
@@ -431,7 +431,7 @@ footer {
     float: right;
   }
   .goodfest-shows ol > li:nth-child(2) {
-    margin-top: 12em;
+    margin-top: 7.5em;
   }
 }
 .goodfest-shows h2 {
@@ -444,8 +444,8 @@ footer {
 .goodfest-shows h3,
 .goodfest-shows .location {
   display: inline;
-  font-size: 1.5em;
-  line-height: 1.5;
+  font-size: inherit;
+  line-height: inherit;
 }
 .goodfest-shows h3:after {
   content: ' / '
@@ -485,19 +485,17 @@ footer {
 .goodfest-shows img {
   float: left;
   margin-top: 0.375em;
+  border-radius: 0.25em;
 }
 .goodfest-shows ol > li > div {
-  margin-left: 100px;
+  margin-left: 80px;
 }
 .goodfest-shows h4 {
   margin: 0;
   font-family: "Cactus W00", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 5em;
+  font-size: 3em;
   line-height: 1;
   text-transform: uppercase;
-}
-.goodfest-shows .artist {
-  font-size: 1.25em;
 }
 .goodfest-shows .artist.coming-soon {
   color: rgb(153, 153, 153);
