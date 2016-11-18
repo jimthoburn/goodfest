@@ -398,13 +398,35 @@ footer {
 /* =Shows
 ----------------------------------------------- */
 .goodfest-shows {
-  margin: 30px 0;
+  padding-bottom: 80px;
 }
 .goodfest-shows ol,
 .goodfest-shows li {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
+}
+@media (min-width: 800px) {
+  .goodfest-shows ol:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .goodfest-shows ol > li {
+    float: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 40%;
+  }
+  .goodfest-shows ol > li:nth-child(2n) {
+    float: right;
+  }
+  .goodfest-shows ol > li:nth-child(2) {
+    margin-top: 12em;
+  }
+}
+.goodfest-shows h2 {
+  text-align: center;
 }
 .goodfest-shows h3 {
   font-weight: normal;
@@ -446,15 +468,27 @@ footer {
   color: rgb(247, 170, 179); /* @pink */
 }
 
+.goodfest-shows header {
+  border-bottom: 3px solid black;
+  padding-bottom: 0.375em;
+  margin-bottom: 0.375em;
+}
+.goodfest-shows img {
+  float: left;
+  margin-top: 0.375em;
+}
+.goodfest-shows ol > li > div {
+  margin-left: 100px;
+}
 .goodfest-shows h4 {
   margin: 0;
   font-family: "Cactus W00", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 5em;
   line-height: 1;
   text-transform: uppercase;
-  border-top: 3px solid black;
-  padding-top: 0em;
-  margin-top: 0em;
+}
+.goodfest-shows .artist {
+  font-size: 1.25em;
 }
 .goodfest-shows .artist.coming-soon {
   color: rgb(153, 153, 153);
@@ -473,7 +507,4 @@ footer {
 }
 .goodfest-shows .pink h4 {
   color: rgb(247, 170, 179); /* @pink */
-}
-.goodfest-shows .location {
-  font-size: 1.25em;
 }
