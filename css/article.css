@@ -59,6 +59,9 @@
   cursor: pointer;
   width: auto;
 }
+.goodfest-shows .action a {
+  padding: 0.375em 0.75em;
+}
 .goodfest-reminderbutton {
   font-size: 1.25em;
 }
@@ -75,6 +78,9 @@
   list-style: none;
   margin-left: 0;
   padding-left: 0;
+}
+.goodfest-shows .action ul {
+  margin-top: 0.75em;
 }
 .goodfest-shows .action li {
   display: inline-block;
@@ -131,6 +137,10 @@
   position: relative;
   padding: 20px;
 }
+.content-area .goodfest-header {
+  margin-left: -60px;
+  margin-right: -60px;
+}
 .goodfest-header h1 {
   margin: 0;
   font-size: inherit;
@@ -142,8 +152,8 @@
 }
 @media (min-width: 60em) {
   .goodfest-header {
-    padding-left: 9em;
-    padding-right: 9em;
+    padding-left: 60px;
+    padding-right: 60px;
   }
   .goodfest-header h1 img {
     height: 10.625em;
@@ -382,13 +392,7 @@ footer {
 /* =Shows
 ----------------------------------------------- */
 .goodfest-shows {
-  margin: 30px 20px;
-}
-.goodfest-shows header h2 {
-  margin: 0;
-  font-size: 2em;
-  text-align: center;
-  text-transform: uppercase;
+  margin: 30px 0;
 }
 .goodfest-shows ol,
 .goodfest-shows li {
@@ -396,14 +400,18 @@ footer {
   margin-left: 0;
   padding-left: 0;
 }
-.goodfest-shows ol {
-  max-width: 40em;
-  margin-left: auto;
-  margin-right: auto;
-}
 .goodfest-shows h3 {
   font-weight: normal;
   text-transform: uppercase;
+}
+.goodfest-shows h3,
+.goodfest-shows .location {
+  display: inline;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+.goodfest-shows h3:after {
+  content: ' / '
 }
 .goodfest-shows h5 {
   font-family: inherit;
@@ -411,7 +419,7 @@ footer {
   font-size: 0.875em;
 }
 .goodfest-shows ol > li {
-  margin-top: 30px;
+  margin-top: 1.5em;
 }
 .goodfest-shows h3 {
   color: rgb(153, 153, 153);
@@ -438,18 +446,12 @@ footer {
   font-size: 5em;
   line-height: 1;
   text-transform: uppercase;
+  border-top: 3px solid black;
+  padding-top: 0em;
+  margin-top: 0em;
 }
 .goodfest-shows .artist.coming-soon {
   color: rgb(153, 153, 153);
-}
-.goodfest-shows .location {
-  padding-bottom: 0.375em;
-  border-bottom: 3px solid;
-  margin-bottom: 0.375em;
-}
-.goodfest-shows .location {
-  padding-top: 0.375em;
-  border-top: 3px solid;
 }
 .goodfest-shows .yellow h4 {
   color: rgb(255, 196, 12); /* @yellow */
@@ -469,4 +471,3 @@ footer {
 .goodfest-shows .location {
   font-size: 1.25em;
 }
-
