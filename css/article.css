@@ -221,6 +221,12 @@
 
 /* =Video
 ----------------------------------------------- */
+.goodfest-video {
+  background-color: black;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
 @media (min-width: 1200px) {
   .goodfest-video {
     position: absolute;
@@ -377,32 +383,13 @@ footer {
 /* =Shows
 ----------------------------------------------- */
 .goodfest-shows {
-  margin-top: 30px;
+  margin: 30px 20px;
 }
-.goodfest-shows > h2 {
+.goodfest-shows header h2 {
   margin: 0;
   font-size: 2em;
   text-align: center;
   text-transform: uppercase;
-}
-.goodfest-shows > h2 span {
-  display: inline-block;
-}
-.goodfest-shows > p {
-  color: rgb(151, 154, 170);
-  font-size: 1.5em;
-  max-width: 40em;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding-bottom: 3em;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-.goodfest-shows > div {
-  background: white;
-  color: black;
-  padding: 1.5em;
 }
 .goodfest-shows ol,
 .goodfest-shows li {
@@ -424,8 +411,8 @@ footer {
   font-weight: inherit;
   font-size: 0.875em;
 }
-.goodfest-shows ol > li + li {
-  margin-top: 3em;
+.goodfest-shows ol > li {
+  margin-top: 30px;
 }
 .goodfest-shows h3 {
   color: rgb(153, 153, 153);
