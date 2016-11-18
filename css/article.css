@@ -132,6 +132,10 @@
 ----------------------------------------------- */
 .goodfest-header {
   background: black;
+  background-image: url(../images/shapes/cloud-green.svg), url(../images/shapes/cloud-red.svg), url(../images/shapes/cloud-yellow.svg);
+  background-repeat: no-repeat;
+  background-position: 75% -125px, 105% -150px, 25% 175px;
+  background-size: 35% auto, auto 150%, 35% auto;
   color: white;
   text-align: center;
   position: relative;
@@ -242,11 +246,13 @@
   padding-top: 20px;
   padding-bottom: 10px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 60em) {
   .goodfest-video {
+    background-color: transparent;
+    padding: 0;
     position: absolute;
     right: 30px;
-    margin-top: -100px;
+    margin-top: -80px;
   }
 }
 
