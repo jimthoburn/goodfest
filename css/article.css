@@ -1,29 +1,6 @@
 
-/*
- * Legal Disclaimer
- *
- * These Fonts are licensed only for use on these domains and their subdomains:
- * good.is
- *
- * It is illegal to download or use them on other websites.
- *
- * While the @font-face statements below may be modified by the client, this
- * disclaimer may not be removed.
- *
- * Lineto.com, 2016
- */
-@font-face {
-  font-family: "GOODFest Circular Book";
-  src: url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.eot");
-  src: url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.eot?#iefix") format("embedded-opentype"),
-       url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.woff2") format("woff2"),
-       url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
 .goodfest {
-  font: 100%/1.5 "GOODFest Circular Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 100%/1.5 "Circular Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .goodfest a {
   color: inherit;
@@ -114,7 +91,7 @@
   color: white;
   padding-top: 3em;
   padding-bottom: 3.75em;
-  background-image: url(../images/color-bars.png);
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeYAAACCCAYAAACTgWs3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4QzZFQjAyNTk3QzQxMUU2QUNGOTg3MkVDNkRDOUVENyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4QzZFQjAyNjk3QzQxMUU2QUNGOTg3MkVDNkRDOUVENyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjBGRTdDN0U4OTdDNDExRTZBQ0Y5ODcyRUM2REM5RUQ3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjhDNkVCMDI0OTdDNDExRTZBQ0Y5ODcyRUM2REM5RUQ3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+F4pkuQAABTVJREFUeNrs3TtrFF0Ax+GJxEsIGAU1RMWooI0WEvULCFpEAzb6BbwUVgoWFgFB0E6ws0i+gHVKQbQVvBRaiRobxQtq4g00up7JpgjDjKhsZmfmPA+cZhd0s5vsL//3XXd7Wq1WAgBUwzJ3AQAIMwAgzAAgzACAMAOAMAMAwgwAwgwACDMACDMAIMwAIMwAgDADAMIMAMIMAAgzAAgzACDMACDMAIAwA4AwAwDCDADCDAAIMwBEprebf/mb4RMd/fOm+saievBO7h6u6k3rD2c6nHU5110L51zlfzCO74zyCWGud7wyt6U1ONGY+3Vm8oDaLLGVo6c79metOnbEYqZx1hdEObVNlAGEuZEmH71wJwAIMzSXtQwIM1YzAMIM1jIgzFjNAAgzWMuAMGM1AyDMYC0DwozVDIAwg7UMCDNWMwDCTK28DeddwXXPrWUAYbaay/UlnKFw1mbOQFKRT5YSZUCYiS3Oc+F8zJxZUQYQZnFGlAFhRpxFGUCYEWdRBoQZcRZlAGFGnEUZOqs/nDU5B2FGnEUZSrYjaf/riQ8557y7R5gRZ1GmMQZO3qrDzdyU/ugUXLfZoyjMiLMoA39l5ehpYUacRRkauZoRZsRZlAFrWZi743A498J5mDm3w1knzqKM1Qzzz2dN+mLGvk0lU31jVb15B8MZKbhu90KgEWUg4rVsMVP71SzKWM0Icw1WM5YyYC0LM1ZzvM4m7TdhyH7M5dOk/TnUYDUTd5itZmu5ZHuS9tsWDmTO9nCGPVpgLVvMWM38s7necXeC1YwwW83Ufi0D1rIwYzVjLVvNHfc8ab82IutnOI89WsJsNWMtI87lSn8jT1+s2JM56ftdTFjLwozVjLUszkQX5SjCbDVbyyDOoizMWM1Yy4izKAtzxVfz5z9cN+PHz1oGcRbl+ec7D31proRzM2m/mGKx2XAeuHuwllkc55nJA6IcqWj+U3YFVvPXcO4k7U+RWnzuexqylsFyFuXowlyROIO1jDiLsjCLs7W8xN4UXP79D9eBOIuyMIszS+RCOFvD2ZY5Q+G8tJYRZ1EWZnGmXL+S9rsmTWfOe1FGnEVZmMUZRFmcRVmYxRlEGXEWZWEWZxBlcRZlYRZnEGXEWZSFWZxBlKl9nCsU5S3hHM05I92+Yd6SMyfOU31j7ghEmdrEOfa37/xP6WdMH8q5/Ec4K2JezHfD+ZhzrlrOIMoVMF7wHPUonD53T23X8vzNKbh8ebdvWLfDvD/9hS/n7PUtDHFHuef1qSrcjH0Fz1G7whms0mqmOfw/ZqsZUYbY1rIwA6Jc49VcC1azMFvNIMpgLQszEFuUrWarWZixmhFlsJaFGRBlq9lqRpitZkQZrGVhBkTZaraaEWarGVEGa1mYAVG2mq1m/p4PsfjH1ewDLhBlaMRavlFw+ZPYw5y+GfyanMvf+daGykY5fZP//sxlP8P5VNZqbg1OlPW1vi24/Gs4H+qwmn3yVKHrC8diztgaztqcy19ZzYhyJaO8YWFRrM657mI4lxr2MJwJ53LO5TMLBxoXZt/cUC8bC6Kc2t7Arzf9bN5pDztl8uIvsJZrx4vAEGYAQJjBWsZqRpgBAGEGrGWrGYQZAIQZsJatZhBmABBmwFq2mkGYAUCYAWvZagZhBsrzMpzZguueuXugA79ktlot9wIAWMwAgDADgDADAMIMAMIMAAgzAAgzACDMACDMAIAwA4AwAwDCDADCDAAIMwAgzAAgzACAMAOAMAMAwgwAwgwACDMACDMAIMwAIMwAQFf8FmAARkd54Me/JFgAAAAASUVORK5CYII=);
   background-size: 243px auto;
 }
 .goodfest-ad h2 {
@@ -133,14 +110,38 @@
 ----------------------------------------------- */
 .goodfest-header {
   background: black;
-  background-image: url(../images/shapes/cloud-green.svg), url(../images/shapes/cloud-red.svg), url(../images/shapes/cloud-yellow.svg);
-  background-repeat: no-repeat;
-  background-position: 75% -125px, 105% -150px, 25% 175px;
-  background-size: 35% auto, auto 150%, 35% auto;
   color: white;
   text-align: center;
   position: relative;
   padding: 20px;
+  overflow: hidden;
+}
+.goodfest-header h1,
+.goodfest-header p,
+.goodfest-header .countdown {
+  position: relative;
+  z-index: 1;
+}
+.goodfest-header .shape.green {
+  position: absolute;
+  top: 0;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  height: 15vw;
+}
+.goodfest-header .shape.red {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  transform: translate(50%, -50%);
+  height: 20em;
+}
+.goodfest-header .shape.yellow {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  transform: translate(-50%, 50%);
+  height: 15vw;
 }
 .content-area .goodfest-header {
   margin-left: -20px;
@@ -160,6 +161,7 @@
 }
 .goodfest-header h1 img {
   height: 5em;
+  width: 4.2253521127em; /* 168 / 198.8 * 5em */
 }
 @media (min-width: 60em) {
   .goodfest-header {
@@ -167,7 +169,8 @@
     padding-right: 60px;
   }
   .goodfest-header h1 img {
-    height: 10.625em;
+    height: 10.625em; /* 170px / 16px */
+    width: 8.9788732394em; /* 168 / 198.8 * 10.625em */
   }
 }
 .goodfest-header .countdown {

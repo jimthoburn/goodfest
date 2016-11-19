@@ -1,27 +1,4 @@
 
-/*
- * Legal Disclaimer
- *
- * These Fonts are licensed only for use on these domains and their subdomains:
- * good.is
- *
- * It is illegal to download or use them on other websites.
- *
- * While the @font-face statements below may be modified by the client, this
- * disclaimer may not be removed.
- *
- * Lineto.com, 2016
- */
-@font-face {
-  font-family: "Circular Book";
-  src: url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.eot");
-  src: url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.eot?#iefix") format("embedded-opentype"),
-       url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.woff2") format("woff2"),
-       url("https://jimthoburn.com/goodinc-fonts/lineto-circular-book.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* =Elements
 ----------------------------------------------- */
 body {
@@ -111,17 +88,19 @@ section + .ad {
 }
 section + .ad,
 footer {
-  background-image: url(../images/color-bars.png);
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeYAAACCCAYAAACTgWs3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4QzZFQjAyNTk3QzQxMUU2QUNGOTg3MkVDNkRDOUVENyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4QzZFQjAyNjk3QzQxMUU2QUNGOTg3MkVDNkRDOUVENyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjBGRTdDN0U4OTdDNDExRTZBQ0Y5ODcyRUM2REM5RUQ3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjhDNkVCMDI0OTdDNDExRTZBQ0Y5ODcyRUM2REM5RUQ3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+F4pkuQAABTVJREFUeNrs3TtrFF0Ax+GJxEsIGAU1RMWooI0WEvULCFpEAzb6BbwUVgoWFgFB0E6ws0i+gHVKQbQVvBRaiRobxQtq4g00up7JpgjDjKhsZmfmPA+cZhd0s5vsL//3XXd7Wq1WAgBUwzJ3AQAIMwAgzAAgzACAMAOAMAMAwgwAwgwACDMACDMAIMwAIMwAgDADAMIMAMIMAAgzAAgzACDMACDMAIAwA4AwAwDCDADCDAAIMwBEprebf/mb4RMd/fOm+saievBO7h6u6k3rD2c6nHU5110L51zlfzCO74zyCWGud7wyt6U1ONGY+3Vm8oDaLLGVo6c79metOnbEYqZx1hdEObVNlAGEuZEmH71wJwAIMzSXtQwIM1YzAMIM1jIgzFjNAAgzWMuAMGM1AyDMYC0DwozVDIAwg7UMCDNWMwDCTK28DeddwXXPrWUAYbaay/UlnKFw1mbOQFKRT5YSZUCYiS3Oc+F8zJxZUQYQZnFGlAFhRpxFGUCYEWdRBoQZcRZlAGFGnEUZOqs/nDU5B2FGnEUZSrYjaf/riQ8557y7R5gRZ1GmMQZO3qrDzdyU/ugUXLfZoyjMiLMoA39l5ehpYUacRRkauZoRZsRZlAFrWZi743A498J5mDm3w1knzqKM1Qzzz2dN+mLGvk0lU31jVb15B8MZKbhu90KgEWUg4rVsMVP71SzKWM0Icw1WM5YyYC0LM1ZzvM4m7TdhyH7M5dOk/TnUYDUTd5itZmu5ZHuS9tsWDmTO9nCGPVpgLVvMWM38s7necXeC1YwwW83Ufi0D1rIwYzVjLVvNHfc8ab82IutnOI89WsJsNWMtI87lSn8jT1+s2JM56ftdTFjLwozVjLUszkQX5SjCbDVbyyDOoizMWM1Yy4izKAtzxVfz5z9cN+PHz1oGcRbl+ec7D31proRzM2m/mGKx2XAeuHuwllkc55nJA6IcqWj+U3YFVvPXcO4k7U+RWnzuexqylsFyFuXowlyROIO1jDiLsjCLs7W8xN4UXP79D9eBOIuyMIszS+RCOFvD2ZY5Q+G8tJYRZ1EWZnGmXL+S9rsmTWfOe1FGnEVZmMUZRFmcRVmYxRlEGXEWZWEWZxBlcRZlYRZnEGXEWZSFWZxBlKl9nCsU5S3hHM05I92+Yd6SMyfOU31j7ghEmdrEOfa37/xP6WdMH8q5/Ec4K2JezHfD+ZhzrlrOIMoVMF7wHPUonD53T23X8vzNKbh8ebdvWLfDvD/9hS/n7PUtDHFHuef1qSrcjH0Fz1G7whms0mqmOfw/ZqsZUYbY1rIwA6Jc49VcC1azMFvNIMpgLQszEFuUrWarWZixmhFlsJaFGRBlq9lqRpitZkQZrGVhBkTZaraaEWarGVEGa1mYAVG2mq1m/p4PsfjH1ewDLhBlaMRavlFw+ZPYw5y+GfyanMvf+daGykY5fZP//sxlP8P5VNZqbg1OlPW1vi24/Gs4H+qwmn3yVKHrC8diztgaztqcy19ZzYhyJaO8YWFRrM657mI4lxr2MJwJ53LO5TMLBxoXZt/cUC8bC6Kc2t7Arzf9bN5pDztl8uIvsJZrx4vAEGYAQJjBWsZqRpgBAGEGrGWrGYQZAIQZsJatZhBmABBmwFq2mkGYAUCYAWvZagZhBsrzMpzZguueuXugA79ktlot9wIAWMwAgDADgDADAMIMAMIMAAgzAAgzACDMACDMAIAwA4AwAwDCDADCDAAIMwAgzAAgzACAMAOAMAMAwgwAwgwACDMACDMAIMwAIMwAQFf8FmAARkd54Me/JFgAAAAASUVORK5CYII=);
   background-size: 243px auto;
 }
 section + .ad h2,
 footer h2 {
-  margin-top: 0;
   background-color: rgba(0, 0, 0, 0.75);
   display: table;
   margin-left: auto;
   margin-right: auto;
   font-weight: inherit;
+}
+section + .ad h2 {
+  margin-top: 0;
 }
 footer ul,
 footer li {
@@ -164,16 +143,18 @@ header h1 {
   line-height: inherit;
   text-align: left;
 }
-header h1 img {
+header h1 svg {
   height: 5em;
+  width: 4.2253521127em; /* 168 / 198.8 * 5em */
 }
-@media (min-width: 60em) {
+@media (min-width: 80em) {
   header {
     padding-left: 15em;
     padding-right: 15em;
   }
-  header h1 img {
-    height: 10.625em;
+  header h1 svg {
+    height: 10.625em; /* 170px / 16px */
+    width: 8.9788732394em; /* 168 / 198.8 * 10.625em */
   }
 }
 header .countdown {
@@ -181,7 +162,7 @@ header .countdown {
   top: 2em;
   right: 1.5em;
 }
-@media (min-width: 60em) {
+@media (min-width: 80em) {
   header {
     padding-top: 3.75em;
   }
@@ -193,7 +174,7 @@ header .countdown {
 header .countdown h2 {
   margin-top: 0;
 }
-@media (max-width: 60em) {
+@media (max-width: 80em) {
   header .countdown h2,
   header .countdown dl {
     font-size: 0.875em;
@@ -209,7 +190,7 @@ header p {
 header p span {
   display: inline-block;
 }
-@media (min-width: 60em) {
+@media (min-width: 80em) {
   header p {
     margin: 0;
     font-size: 2em;
@@ -252,7 +233,7 @@ header dl {
   margin-bottom: 1.5em;
   position: relative;
 }
-@media (min-width: 60em) {
+@media (min-width: 80em) {
   .video {
     margin-top: 3em;
     padding-left: 12em;
