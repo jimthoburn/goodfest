@@ -312,30 +312,10 @@ footer {
 .reminder .checkbox {
   margin-top: 0.375em;
 }
-.reminder ul,
-.reminder li {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-.reminder ul {
-  border-top: 2px solid;
+.reminder form {
   max-width: 45em;
   margin-left: auto;
   margin-right: auto;
-}
-.reminder li {
-  padding-bottom: 1.5em;
-  border-bottom: 2px solid;
-}
-.reminder li em {
-  font-style: normal;
-  background: white;
-  color: black;
-  display: inline-block;
-  padding: 0.375em 0.75em;
-}
-.reminder label span:first-child {
 }
 .reminder input[type="text"],
 .reminder input[type="email"] {
@@ -448,7 +428,7 @@ footer {
 .shows > div {
   background: white;
   color: black;
-  padding: 1.5em;
+  padding: 1.5em 1.5em 3em;
 }
 .shows ol,
 .shows li {
@@ -505,9 +485,6 @@ footer {
   .playing strong {
     font-size: 9.375em; /* 150px / 16px */
   }
-}
-.shows h4.coming-soon {
-  color: rgb(221, 221, 221);
 }
 .shows .location,
 .playing span {
