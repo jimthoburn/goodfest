@@ -133,9 +133,7 @@ footer p {
 header {
   text-align: center;
   position: relative;
-  padding-top: 1.5em;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding: 1.5em;
 }
 header h1 {
   margin: 0;
@@ -165,6 +163,7 @@ header .countdown {
 @media (min-width: 80em) {
   header {
     padding-top: 3.75em;
+    padding-bottom: 3.75em;
   }
   header .countdown {
     top: 3em;
@@ -229,13 +228,11 @@ header dl {
 ----------------------------------------------- */
 .video {
   max-width: 100%;
-  margin-top: 1.5em;
   margin-bottom: 1.5em;
   position: relative;
 }
 @media (min-width: 80em) {
   .video {
-    margin-top: 3em;
     padding-left: 12em;
     padding-right: 12em;
   }
