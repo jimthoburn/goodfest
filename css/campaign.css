@@ -535,6 +535,7 @@ footer {
 }
 .shows ol > li .media {
   text-align: center;
+  margin-bottom: 2.5em;
 }
 @media (min-width: 40em) {
   .shows ol {
@@ -614,7 +615,7 @@ footer {
   font-size: 0.875em;
 }
 .shows ol > li + li {
-  margin-top: 3em;
+  margin-top: 2.5em;
 }
 .shows h3 {
   color: rgb(153, 153, 153);
@@ -640,7 +641,7 @@ footer {
 .playing strong {
   margin: 0;
   font-family: "Cactus W00", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 5em;
+  font-size: 6em;
   line-height: 0.9;
   text-transform: uppercase;
 }
@@ -660,7 +661,7 @@ footer {
   border-top: 3px solid;
 }
 .playing {
-  margin-top: 0;
+  margin-top: 1.25em;
   margin-bottom: 1.25em;
 }
 .playing span {
@@ -673,6 +674,7 @@ footer {
   color: rgb(153, 153, 153);
   border-top: 3px solid black;
   margin-top: 0.05em;
+  padding-top: 0.05em;
 }
 .shows .yellow .playing strong {
   color: rgb(255, 196, 12); /* @yellow */
@@ -689,10 +691,13 @@ footer {
 .shows .pink .playing strong {
   color: rgb(247, 170, 179); /* @pink */
 }
+.shows h3,
 .shows .location,
 .shows .featuring {
   font-size: 1.25em;
+  line-height: 1;
 }
 .shows .featuring {
-  margin-top: 0;
+  margin-top: 0.625em;
+  line-height: 1.25;
 }
