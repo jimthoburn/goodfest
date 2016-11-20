@@ -32,6 +32,46 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono" />
   <link rel="stylesheet" href="https://fast.fonts.net/cssapi/90991e22-dfdb-45f4-a551-692df838149c.css" />
   <link rel="stylesheet" href="css/campaign.css" />
+
+  <script>
+  window.GoodfestCountdown = function(timeToCountdownTo) {
+    var self = this;
+
+    self.destTime = timeToCountdownTo;
+
+    self.getTimeLeft = function() {
+      var now = new Date();
+      var diff = self.destTime - now;
+      var seconds = Math.floor((diff / 1000) % 60);
+      var minutes = Math.floor((diff / 1000 / 60) % 60);
+      var hours =   Math.floor((diff / (1000 * 60 * 60)) % 24);
+      var days =    Math.floor(diff / (1000 * 60 * 60 * 24));
+
+      return {
+        diff: diff,
+        days: days,
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds
+      };
+    };
+
+    self.renderTime = function() {
+      var diff = self.getTimeLeft();
+      document.getElementById('countdown_days').innerHTML = ('0000'+diff.days).slice(-2);
+      document.getElementById('countdown_hours').innerHTML = ('0000'+diff.hours).slice(-2);
+      document.getElementById('countdown_minutes').innerHTML = ('0000'+diff.minutes).slice(-2);
+      document.getElementById('countdown_seconds').innerHTML = ('0000'+diff.seconds).slice(-2);
+
+      if(diff.diff <= 0) {
+        window.clearInterval(self.timerInterval);
+      }
+    };
+
+    self.renderTime();
+    self.timerInterval = window.setInterval(self.renderTime, 1000);
+  };
+  </script>
 </head>
 <body>
   <div class="ad">
@@ -74,19 +114,19 @@
       <h2>Next show in</h2>
       <div>
         <dl>
-          <dt>02</dt>
+          <dt id="countdown_days">00</dt>
           <dd>Days</dd>
         </dl>
         <dl>
-          <dt>42</dt>
+          <dt id="countdown_hours">00</dt>
           <dd><abbr title="Hours">Hrs</abbr></dd>
         </dl>
         <dl>
-          <dt>06</dt>
+          <dt id="countdown_minutes">00</dt>
           <dd><abbr title="Minutes">Min</abbr></dd>
         </dl>
         <dl>
-          <dt>02</dt>
+          <dt id="countdown_seconds">00</dt>
           <dd><abbr title="Seconds">Sec</abbr></dd>
         </dl>
       </div>
@@ -305,5 +345,9 @@
     <p>© 2016 GOOD Worldwide Inc</p>
   </footer>
 
+  <script type="text/javascript">
+    // var countdown = GoodfestCountdown(new Date("2016-11-29 19:00:00:00 EST")); // This only seems to work in Chrome
+    var countdown = GoodfestCountdown(new Date("2016-11-29T19:00:00-05:00"));
+  </script>
 </body>
 </html>
