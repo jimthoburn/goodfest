@@ -545,21 +545,26 @@ footer {
   .shows ol > li {
     float: left;
     width: 50%;
+    /*
     margin-bottom: 15em;
+    */
     position: relative;
   }
   .shows ol > li:last-child {
     margin-bottom: 0;
   }
+  /*
   .shows ol > li .media {
     position: absolute;
     left: 100%;
     width: 100%;
     top: 3em;
   }
+  */
   .shows ol > li:nth-child(2n) {
     float: right;
   }
+  /*
   .shows ol > li:nth-child(2n) .media {
     top: auto;
     bottom: 3em;
@@ -568,6 +573,13 @@ footer {
   }
   .shows ol > li:nth-child(2) {
     margin-top: 21em;
+  }
+  */
+  .shows ol > li .media {
+    display: none;
+  }
+  .shows ol > li .media[style] {
+    display: block !important;
   }
 }
 @media (min-width: 80em) {
