@@ -129,6 +129,7 @@ footer h2 {
 }
 body > section + .ad h2 {
   margin-top: 0;
+  margin-bottom: 1.25em;
 }
 footer ul,
 footer li {
@@ -363,6 +364,10 @@ header dl {
 .social,
 footer {
   padding: 1.5em;
+}
+footer {
+  padding-top: 3.75em;
+  padding-bottom: 3.75em;
 }
 .reminder,
 .social {
