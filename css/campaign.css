@@ -376,8 +376,9 @@ footer {
   color: black;
 }
 .reminder h2 {
-  font-size: 1.875em;
-  max-width: 12em;
+  font-size: 2.5em;
+  max-width: 9em;
+  margin-bottom: 0.3125em;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -391,15 +392,20 @@ footer {
 }
 .reminder .email label > span:first-child {
   display: block;
-  margin-bottom: 0.375em;
+  margin-bottom: 0.625em;
 }
 .reminder .email label br {
   display: none;
 }
 .reminder .checkbox {
-  margin-top: 0.375em;
+  margin-top: 0.625em;
 }
 .reminder form {
+  border-width: 1px 0;
+  border-style: solid;
+  padding-bottom: 1.25em;
+  padding-right: 1.25em;
+  padding-left: 1.25em;
   max-width: 33em;
   margin-left: auto;
   margin-right: auto;
