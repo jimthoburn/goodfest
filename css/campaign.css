@@ -650,6 +650,9 @@ footer {
   line-height: 0.9;
   text-transform: uppercase;
 }
+.shows h4.stay-tuned {
+  color: rgb(221, 221, 221);
+}
 @media (min-width: 60em) {
   .shows h4,
   .playing strong {
