@@ -517,13 +517,16 @@ footer {
 .shows > div {
   background: white;
   color: black;
-  padding: 1.5em 0 3em;
+  padding: 3.75em 0 3em;
 }
 .shows ol,
 .shows li {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
+}
+.shows ol {
+  margin-top: 0;
 }
 .shows ol > li {
   padding-left: 1.5em;
@@ -583,10 +586,22 @@ footer {
     display: block !important;
   }
 }
+@media (min-width: 60em) {
+  .shows ol {
+    margin-left: 6em;
+    margin-right: 6em;
+  }
+}
 @media (min-width: 80em) {
   .shows ol {
-    margin-left: 10.5em;
-    margin-right: 10.5em;
+    margin-left: 9em;
+    margin-right: 9em;
+  }
+}
+@media (min-width: 100em) {
+  .shows ol {
+    margin-left: 12em;
+    margin-right: 12em;
   }
 }
 .shows h3 {
@@ -603,6 +618,7 @@ footer {
 }
 .shows h3 {
   color: rgb(153, 153, 153);
+  margin: 0;
 }
 .shows .yellow h3 {
   color: rgb(255, 196, 12); /* @yellow */
@@ -625,7 +641,7 @@ footer {
   margin: 0;
   font-family: "Cactus W00", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 5em;
-  line-height: 1;
+  line-height: 0.9;
   text-transform: uppercase;
 }
 @media (min-width: 60em) {
@@ -634,15 +650,18 @@ footer {
     font-size: 9.375em; /* 150px / 16px */
   }
 }
-.shows .location,
-.playing span {
-  padding-bottom: 0.375em;
-  border-bottom: 3px solid;
-  margin-bottom: 0.375em;
-}
 .shows .location {
-  padding-top: 0.375em;
+  line-height: 1;
+  padding-bottom: 0.625em;
+  border-bottom: 3px solid;
+  margin-bottom: 0.3125em;
+  margin-top: 0.625em;
+  padding-top: 0.625em;
   border-top: 3px solid;
+}
+.playing {
+  margin-top: 0;
+  margin-bottom: 1.25em;
 }
 .playing span {
   display: block;
@@ -652,6 +671,8 @@ footer {
 .playing strong {
   display: block;
   color: rgb(153, 153, 153);
+  border-top: 3px solid black;
+  margin-top: 0.05em;
 }
 .shows .yellow .playing strong {
   color: rgb(255, 196, 12); /* @yellow */
@@ -668,6 +689,10 @@ footer {
 .shows .pink .playing strong {
   color: rgb(247, 170, 179); /* @pink */
 }
-.shows .location {
+.shows .location,
+.shows .featuring {
   font-size: 1.25em;
+}
+.shows .featuring {
+  margin-top: 0;
 }
