@@ -228,11 +228,6 @@ header .countdown {
     display: inline !important;
   }
 }
-@media (min-width: 70em) {
-  header .countdown {
-    right: 7.5em;
-  }
-}
 @media (min-width: 80em) {
   header .countdown {
     right: 10em;
@@ -282,15 +277,19 @@ header h2 {
   }
 }
 @media (min-width: 62.5em) {
-  header h2,
-  header p {
+  header h2 {
     font-size: 1.5em;
+  }
+  header p {
+    font-size: 2em;
   }
 }
 @media (min-width: 100em) {
-  header h2,
-  header p {
+  header h2 {
     font-size: 2em;
+  }
+  header p {
+    font-size: 2.5em;
   }
 }
 header dt {
@@ -339,6 +338,7 @@ header dl {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: -1;
   width: 20vw;
   height: 20vw;
   transform: translate(-32.5%, 37.5%);
@@ -401,7 +401,9 @@ footer {
 }
 .reminder h2 {
   font-size: 2.5em;
-  max-width: 9em;
+  line-height: 1.125;
+  max-width: 7em;
+  margin-top: 0;
   margin-bottom: 0.3125em;
   margin-left: auto;
   margin-right: auto;
@@ -453,17 +455,14 @@ footer {
   background: white;
   color: black;
 }
-@media (min-width: 62.5em) {
+@media (min-width: 30em) {
+  .reminder h2 {
+    font-size: 3.5em;
+  }
+}
+@media (min-width: 40em) {
   .reminder h2 {
     font-size: 4.5em;
-    text-align: center;
-  }
-  .reminder h3 {
-    font-size: 2em;
-  }
-  .reminder li {
-    padding-right: 1.5em;
-    padding-left: 1.5em;
   }
 }
 
