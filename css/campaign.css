@@ -311,7 +311,8 @@ header dl {
     top: 0;
     right: 0;
     z-index: -1;
-    transform: translate(5%, -50%);
+    transform: translate(0, -50%);
+    width: 35vw;
     height: 15vw;
   }
   .video .corner {
