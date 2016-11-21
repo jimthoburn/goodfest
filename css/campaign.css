@@ -675,24 +675,27 @@ body > .ad h2 span {
   color: rgb(153, 153, 153);
   margin: 0;
 }
+.shows .featuring em {
+  font-style: inherit;
+}
 .shows .yellow h3,
-.shows .yellow .featuring {
+.shows .yellow .featuring em {
   color: rgb(255, 196, 12); /* @yellow */
 }
 .shows .red h3,
-.shows .red .featuring {
+.shows .red .featuring em {
   color: rgb(241, 97, 77); /* @red */
 }
 .shows .blue h3,
-.shows .blue .featuring {
+.shows .blue .featuring em {
   color: rgb(0, 84, 206); /* @blue */
 }
 .shows .green h3,
-.shows .green .featuring {
+.shows .green .featuring em {
   color: rgb(0, 174, 113); /* @green */
 }
 .shows .pink h3,
-.shows .pink .featuring {
+.shows .pink .featuring em {
   color: rgb(247, 170, 179); /* @pink */
 }
 
