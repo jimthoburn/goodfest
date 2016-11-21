@@ -675,19 +675,24 @@ body > .ad h2 span {
   color: rgb(153, 153, 153);
   margin: 0;
 }
-.shows .yellow h3 {
+.shows .yellow h3,
+.shows .yellow .featuring {
   color: rgb(255, 196, 12); /* @yellow */
 }
-.shows .red h3 {
+.shows .red h3,
+.shows .red .featuring {
   color: rgb(241, 97, 77); /* @red */
 }
-.shows .blue h3 {
+.shows .blue h3,
+.shows .blue .featuring {
   color: rgb(0, 84, 206); /* @blue */
 }
-.shows .green h3 {
+.shows .green h3,
+.shows .green .featuring {
   color: rgb(0, 174, 113); /* @green */
 }
-.shows .pink h3 {
+.shows .pink h3,
+.shows .pink .featuring {
   color: rgb(247, 170, 179); /* @pink */
 }
 
