@@ -537,6 +537,7 @@ footer {
 @media (min-width: 40em) {
   .social .message textarea {
     font-size: 1.125em;
+    min-height: 5.25em;
   }
 }
 .social ul,
