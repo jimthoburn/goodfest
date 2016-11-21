@@ -422,6 +422,7 @@ footer {
   background-color: rgb(247, 170, 179); /* @pink */
   color: black;
 }
+.social h2,
 .reminder h2 {
   font-size: 2.5em;
   font-weight: bold;
@@ -463,6 +464,9 @@ footer {
   padding-bottom: 1.25em;
   padding-right: 1.25em;
   padding-left: 1.25em;
+}
+.social .message,
+.reminder form {
   max-width: 33em;
   margin-left: auto;
   margin-right: auto;
@@ -487,11 +491,17 @@ footer {
   color: black;
 }
 @media (min-width: 30em) {
+  .social h2 {
+    font-size: 2.5em;
+  }
   .reminder h2 {
     font-size: 3.5em;
   }
 }
 @media (min-width: 40em) {
+  .social h2 {
+    font-size: 3.5em;
+  }
   .reminder h2 {
     font-size: 4.5em;
   }
@@ -499,10 +509,35 @@ footer {
 
 /* =Social
 ----------------------------------------------- */
-.social h2 {
-  /* @hidden-accessible */
-  position: absolute;
-  left: -9999px;
+.social .message h2 {
+  margin-bottom: 0;
+}
+.social .message {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 1.25em;
+}
+.social .message label > span:first-child {
+  color: white;
+}
+.social .message textarea {
+  margin: 1.25em 0 0 0;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0;
+  border: 2px solid;
+  background: transparent;
+  padding: 0.625em 1.25em;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 1.25;
+  min-height: 6.5em;
+  text-align: center;
+}
+@media (min-width: 40em) {
+  .social .message textarea {
+    font-size: 1.125em;
+  }
 }
 .social ul,
 .social li {
