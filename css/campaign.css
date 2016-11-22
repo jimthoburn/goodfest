@@ -775,6 +775,10 @@ footer {
   font-size: 6em;
   line-height: 0.9;
   text-transform: uppercase;
+
+  /* @wrap-long-words */
+  word-wrap     : break-word;
+  overflow-wrap : break-word;
 }
 .shows h4.stay-tuned {
   color: rgb(221, 221, 221);
