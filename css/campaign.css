@@ -594,10 +594,17 @@ footer {
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
-.shows > h2 span,
-body > .ad h2 span {
+
+/* Attempt to keep related words on one line */
+.shows > h2 span {
   display: inline-block;
 }
+@media (min-width: 50em) {
+  body > .ad h2 span {
+    display: inline-block;
+  }
+}
+
 .shows > p {
   color: rgb(151, 154, 170);
   max-width: 40em;
@@ -644,6 +651,11 @@ body > .ad h2 span {
   text-align: center;
 }
 .shows ol > li .media img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+.shows ol > li .media video {
   width: 100%;
   height: auto;
   max-width: 600px;
