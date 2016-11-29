@@ -247,7 +247,7 @@ header .countdown {
     top: 3.125em;
     right: 3em;
   }
-  header .arrow {
+  header .countdown .arrow {
     display: inline !important;
   }
 }
