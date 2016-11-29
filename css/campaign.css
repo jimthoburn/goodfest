@@ -1,10 +1,6 @@
 
 /* =Elements
 ----------------------------------------------- */
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
 body {
   font: 100%/1.25 "Circular Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: black;
@@ -90,6 +86,7 @@ button:focus {
   box-shadow: 0 0 0 black;
 }
 .sold-out {
+  font-weight: inherit;
   display: inline-block;
   background: white;
   padding: 0 0.375em;
@@ -127,10 +124,17 @@ button:focus {
 ----------------------------------------------- */
 footer,
 body >.ad {
-  padding: 1.5em;
   background-color: rgb(232, 232, 232);
   color: black;
   text-align: center;
+}
+footer {
+  padding: 1.5em;
+}
+@media (min-width: 324px) {
+  body > .ad {
+    padding: 1.5em;
+  }
 }
 footer,
 body > section + .ad {
