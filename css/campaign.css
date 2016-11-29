@@ -76,18 +76,24 @@ button {
   font-size: inherit;
   font-family: inherit;
   transition: all 0.2s;
-  cursor: pointer;
 }
 button {
   font-size: 1.25em;
+  cursor: pointer;
 }
-.action a:hover,
-.action a:active,
-.action a:focus,
+.action a[href]:hover,
+.action a[href]:active,
+.action a[href]:focus,
 button:hover,
 button:active,
 button:focus {
   box-shadow: 0 0 0 black;
+}
+.sold-out {
+  display: inline-block;
+  background: white;
+  padding: 0 0.375em;
+  transform: rotate(-10deg);
 }
 .action ul,
 .action li {
