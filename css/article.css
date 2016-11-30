@@ -33,7 +33,6 @@
   font-size: inherit;
   font-family: inherit;
   transition: all 0.2s;
-  cursor: pointer;
   width: auto;
 }
 .goodfest-shows .action a {
@@ -41,14 +40,22 @@
 }
 .goodfest-reminder button {
   font-size: 1.25em;
+  cursor: pointer;
 }
-.goodfest-shows .action a:hover,
-.goodfest-shows .action a:active,
-.goodfest-shows .action a:focus,
+.goodfest-shows .action a[href]:hover,
+.goodfest-shows .action a[href]:active,
+.goodfest-shows .action a[href]:focus,
 .goodfest-reminder button:hover,
 .goodfest-reminder button:active,
 .goodfest-reminder button:focus {
   box-shadow: 0 0 0 black;
+}
+.goodfest-shows .sold-out {
+  font-weight: inherit;
+  display: inline-block;
+  background: white;
+  padding: 0 0.375em;
+  transform: rotate(-10deg);
 }
 .goodfest-shows .action ul,
 .goodfest-shows .action li {
@@ -655,6 +662,9 @@
 }
 .goodfest-link a {
   text-decoration: underline;
+  text-shadow: none !important;
+  color: inherit !important;
+  background: transparent !important;
 }
 .goodfest-link ul,
 .goodfest-link li {
@@ -691,15 +701,15 @@
 .goodfest-link li a {
   display: inline-block;
   padding: 0.625em;
-  background: white;
-  color: black;
+  background: white !important;
+  color: black !important;
   border-radius: 50%;
   transition: all 0.2s;
 }
 .goodfest-link li a:hover,
 .goodfest-link li a:active,
 .goodfest-link li a:focus {
-  background-color: rgb(0, 84, 206); /* @blue */
+  background-color: rgb(0, 84, 206) !important; /* @blue */
 }
 .goodfest-link li svg {
   display: block;
