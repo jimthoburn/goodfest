@@ -38,6 +38,9 @@
 .goodfest-shows .action a {
   padding: 0.375em 0.75em;
 }
+.goodfest-shows .action a:not([href]) {
+  cursor: default;
+}
 .goodfest-reminder button {
   font-size: 1.25em;
   cursor: pointer;
@@ -126,28 +129,37 @@
   padding: 20px;
   overflow: hidden;
 }
+.goodfest-header.has-return-link {
+  padding-top: 60px;
+}
 .goodfest-header h1,
-.goodfest-header p,
+.goodfest-header h1 + p,
 .goodfest-header .countdown {
   position: relative;
   z-index: 1;
 }
-.goodfest-header p {
+.goodfest-header h1 + p {
   margin-top: 0.625em;
 }
 .goodfest-header .shape.green {
   position: absolute;
   top: 0;
   left: 75%;
-  transform: translate(-80%, -50%);
+  transform: translate(-50%, -50%);
   height: 15vw;
+}
+@media (min-width: 40em) {
+  .goodfest-header .shape.green {
+    left: 75%;
+    transform: translate(-80%, -50%);
+  }
 }
 .goodfest-header .shape.red {
   position: absolute;
-  top: 25%;
+  top: 50%;
   right: 0;
   transform: translate(50%, -60%);
-  height: 25em;
+  height: 25vw;
 }
 .goodfest-header .shape.yellow {
   position: absolute;
@@ -186,6 +198,11 @@
   height: 5em;
   width: 4.2253521127em; /* 168 / 198.8 * 5em */
 }
+.goodfest-header .return {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
 @media (min-width: 62.5em) {
   .goodfest-header h1 svg {
     height: 8.125em; /* 130px / 16px */
@@ -194,8 +211,15 @@
 }
 @media (min-width: 60em) {
   .goodfest-header {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding: 40px 60px;
+  }
+  .goodfest-header.has-return-link {
+    padding-top: 60px;
+  }
+  .goodfest-header .return {
+    position: absolute;
+    top: 20px;
+    left: 60px;
   }
   .goodfest-header h1 svg {
     height: 10.625em; /* 170px / 16px */
@@ -204,7 +228,7 @@
 }
 .goodfest-header .countdown {
   position: absolute;
-  top: 20px;
+  top: 60px;
   right: 30px;
 }
 .goodfest-header .countdown .arrow {
@@ -212,12 +236,8 @@
   height: 2.5em;
 }
 @media (min-width: 60em) {
-  .goodfest-header {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
   .goodfest-header .countdown {
-    top: 40px;
+    top: 60px;
     width: 300px;
   }
   .goodfest-header-for-shows .countdown {
@@ -239,18 +259,18 @@
     font-size: 0.875em;
   }
 }
-.goodfest-header p {
+.goodfest-header h1 + p {
   max-width: 40em;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
 }
-.goodfest-header p span {
+.goodfest-header h1 + p span {
   display: inline-block;
 }
 @media (min-width: 60em) {
-  .goodfest-header p {
+  .goodfest-header h1 + p {
     margin: 0;
     font-size: 2em;
     position: absolute;
@@ -284,14 +304,18 @@
   font-size: 0.75em;
 }
 
+/* SHIM: Reduce the space below the header on the GOODFest page. */
+.goodfest-header ~ .wrapper .abovehero,
+.goodfest-header ~ .wrapper .no-hero-spacer {
+  height: auto;
+}
+
 
 /* =Video
 ----------------------------------------------- */
 .goodfest-video {
   background-color: black;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 10px;
 }
 @media (min-width: 60em) {
   .goodfest-video {
@@ -302,6 +326,7 @@
     margin-top: -80px;
   }
 }
+
 
 /* =Reminder
 ----------------------------------------------- */
