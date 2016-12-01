@@ -673,6 +673,14 @@ footer {
   height: auto;
   max-width: 600px;
 }
+.shows ol > li > a {
+  text-decoration: none;
+}
+.shows ol > li > a:hover h4,
+.shows ol > li > a:active h4,
+.shows ol > li > a:focus h4 {
+  text-decoration: underline;
+}
 @media (min-width: 40em) {
   .shows ol {
     margin-left: 0;
