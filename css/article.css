@@ -663,16 +663,23 @@
   padding: 20px;
   box-sizing: border-box;
 }
-@media (min-width: 62.5em) {
-  .goodfest-link {
-    margin-left: 100px;
-    margin-right: 100px;
+@supports (transform: translate(20px, -100%)) {
+  @media (min-width: 62.5em) {
+    .goodfest-link {
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+    .goodfest-link > div {
+      margin-top: -26px;
+      width: 40%;
+      margin-left: 50%;
+      transform: translate(20px, -100%);
+    }
   }
-  .goodfest-link > div {
-    margin-top: -52px;
-    width: 40%;
-    margin-left: 50%;
-    transform: translate(20px, -100%);
+  @media (min-width: 80em) {
+    .goodfest-link > div {
+      margin-top: -52px;
+    }
   }
 }
 @media (min-width: 80em) {
