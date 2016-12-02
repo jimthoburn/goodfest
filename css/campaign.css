@@ -301,7 +301,7 @@ header h2 {
   }
 }
 @media (min-width: 45em) {
-  @supports(transform: translate(-50%, -50%)) {
+  @supports (transform: translate(-50%, -50%)) {
     header p {
       margin: 0;
       position: absolute;
@@ -708,7 +708,7 @@ footer {
   .shows ol > li:nth-child(2n+1) {
     clear: both;
   }
-  @supports(transform: translate(0, 100%)) {
+  @supports (transform: translate(0, 100%)) {
     .shows ol > li:nth-child(2n+1) {
       margin-bottom: 28%;
     }
@@ -722,7 +722,7 @@ footer {
   .shows ol > li:nth-child(2n+1):last-child {
     margin-bottom: 0;
   }
-  @supports(transform: translate(100%, 0)) {
+  @supports (transform: translate(100%, 0)) {
     .shows ol > li:nth-child(2n+1):last-child .media {
       position: absolute;
       bottom: auto;

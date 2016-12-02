@@ -193,6 +193,7 @@
   font-size: inherit;
   line-height: inherit;
   text-align: left;
+  display: table;
 }
 .goodfest-header h1 svg {
   height: 5em;
@@ -202,6 +203,11 @@
   position: absolute;
   top: 10px;
   left: 20px;
+}
+.goodfest-header .return a:hover,
+.goodfest-header .return a:active,
+.goodfest-header .return a:focus {
+  color: rgb(255, 196, 12); /* @yellow */
 }
 @media (min-width: 62.5em) {
   .goodfest-header h1 svg {
@@ -228,7 +234,7 @@
 }
 .goodfest-header .countdown {
   position: absolute;
-  top: 60px;
+  top: 20px;
   right: 30px;
 }
 .goodfest-header .countdown .arrow {
@@ -264,6 +270,7 @@
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
   margin-bottom: 0;
 }
 .goodfest-header h1 + p span {
@@ -271,12 +278,16 @@
 }
 @media (min-width: 60em) {
   .goodfest-header h1 + p {
-    margin: 0;
     font-size: 2em;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  }
+  @supports (transform: translate(-50%, -50%)) {
+    .goodfest-header h1 + p {
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 .goodfest-header h2 {
@@ -556,7 +567,12 @@
 }
 .goodfest-shows h2 {
   font-weight: 500;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
+}
+.goodfest-shows h2 span {
+  display: inline-block;
 }
 .goodfest-shows h3 {
   font-weight: normal;
