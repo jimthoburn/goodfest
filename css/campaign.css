@@ -19,6 +19,11 @@ abbr[title] {
   text-decoration: none;
 }
 
+.hidden-accessible {
+  position: absolute;
+  left: -9999px;
+}
+
 /*
 @media (min-width: 400px) and (min-height: 200px) {
   body {
