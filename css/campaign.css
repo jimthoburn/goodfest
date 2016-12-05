@@ -20,8 +20,8 @@ abbr[title] {
 }
 
 .hidden-accessible {
-  position: absolute;
-  left: -9999px;
+  position: absolute !important;
+  left: -9999px !important;
 }
 
 /*
@@ -90,13 +90,61 @@ button:active,
 button:focus {
   box-shadow: 0 0 0 black;
 }
+
+/* Within a button */
 .sold-out {
   font-weight: inherit;
   display: inline-block;
   background: white;
   padding: 0 0.375em;
   transform: rotate(-10deg);
+  text-transform: uppercase;
 }
+
+/* Above the location */
+p.sold-out {
+  position: absolute;
+  z-index: 1;
+  margin-top: -1.75em;
+  right: 3.75em;
+  padding: 0.5em 1.5em;
+  background: rgb(204, 204, 204);
+  color: white;
+}
+
+.yellow p.sold-out {
+  background: rgb(255, 196, 12); /* @yellow */
+}
+.red p.sold-out {
+  background: rgb(241, 97, 77); /* @red */
+}
+.blue p.sold-out {
+  background: rgb(0, 84, 206); /* @blue */
+  background: rgb(0, 94, 229); /* @light-blue */
+}
+.green p.sold-out {
+  background: rgb(0, 174, 113); /* @green */
+}
+.pink p.sold-out {
+  background: rgb(247, 170, 179); /* @pink */
+}
+
+.supporting {
+  margin-top: -0.875em;
+  font-size: 1.25em;
+}
+.supporting a {
+  display: inline-block;
+  text-decoration: none;
+  padding-bottom: 0.1em;
+  border-bottom: 0.1em solid;
+}
+.action.highlights a {
+  box-shadow: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .action ul,
 .action li {
   list-style: none;
@@ -124,6 +172,25 @@ button:focus {
 .pink .action a {
   background: rgb(247, 170, 179); /* @pink */
 }
+
+/*
+.action .icon {
+  background: black;
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+  margin: -0.75em 1.5em -0.75em -1.5em;
+  padding: 1em 2em;
+}
+.action .icon svg {
+  width: 1.25em;
+  height: 1.25em;
+}
+.action .icon svg path,
+.action .icon svg polygon {
+  fill: currentColor;
+}
+*/
 
 /* =Ad
 ----------------------------------------------- */
@@ -414,8 +481,42 @@ header dl {
   }
 }
 .shows .video {
+  margin-top: 0.625em;
   padding-left: 0;
   padding-right: 0;
+}
+.shows .play {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+.shows .play .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: black;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 0.625em 1.25em 0.3125em 1.25em;
+  border-radius: 0.3125em;
+  color: white;
+  font-size: 2em;
+  transition: background-color 0.2s;
+  transform: translate(-50%, -50%);
+}
+.shows .play:hover .icon,
+.shows .play:active .icon,
+.shows .play:focus .icon {
+  background-color: black;
+}
+.shows .play .icon {
+  vertical-align: middle;
+}
+.shows .play svg {
+  width: 1em;
+  height: 1em;
+}
+.shows .play svg polygon {
+  fill: currentColor;
 }
 .video > div {
   max-width: 100%;
@@ -683,14 +784,6 @@ footer {
   width: 100%;
   height: auto;
   max-width: 600px;
-}
-.shows ol > li > a {
-  text-decoration: none;
-}
-.shows ol > li > a:hover h4,
-.shows ol > li > a:active h4,
-.shows ol > li > a:focus h4 {
-  text-decoration: underline;
 }
 @media (min-width: 40em) {
   .shows ol {

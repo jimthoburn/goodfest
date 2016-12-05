@@ -146,7 +146,7 @@
       <!--
       <iframe src="https://www.youtube.com/embed/SNEVxp6tQcE?rel=0&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
       -->
-      <iframe src="https://www.youtube.com/embed/Wd1d_Vl2SfU" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/Wd1d_Vl2SfUrel=0&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
 
       <svg viewBox="0 0 352.5 364.5" width="353" height="365" class="shape corner" style="display: none">
         <path fill="rgb(241, 97, 77)" d="M37.8,0.1v330.3h311.8c0,0,21.1-51.3-49.4-59.3c-70.5-8-31.9-52.9-54.4-68.9s-40.2,2.7-69-23
@@ -186,28 +186,43 @@
 
           <h3><abbr title="November">Nov</abbr> 29</h3>
           <p class="location"><abbr title="at">@</abbr> BAM Cafe, New York City</p>
+          <p class="sold-out">Sold out</p>
 
-          <div class="hidden-accessible">
+          <a href="https://www.youtube.com/embed/Wd1d_Vl2SfU" class="play">
             <h4>Glass Animals</h4>
             <p class="featuring">in a special intimate performance, plus <em>Preservation Hall Jazz Band</em>, <em>Madame Gandhi</em>, <em>Shilpa Ray</em>, and other guests</p>
 
-            <p class="playing"><span>Playing for</span> <strong>Generosity</strong></p>
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.2 33.7" width="29" height="34">
+                <polygon fill="white" points="29.2,16.9 0,0 0,33.7 29.2,16.9 0,0 0,33.7 "></polygon>
+              </svg>
+            </span>
+          </a>
+
+          <div>
+            <script type="text/template" class="video-template">
+              <div class="video">
+                <div>
+                  <iframe src="https://www.youtube.com/embed/Wd1d_Vl2SfU?rel=0&showinfo=0&autohide=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </script>
           </div>
 
-          <div class="video">
-            <div>
-              <iframe id="youtube_vid" src="https://www.youtube.com/embed/Wd1d_Vl2SfU?&rel=0&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
+          <p class="playing"><span>Playing for</span> <strong>Generosity</strong></p>
+
+          <p class="supporting">In support of <a href="https://www.donorschoose.org" target="_blank">DonorsChoose.org</a></p>
 
           <div class="action">
             <ul>
+              <li><a href="">See Highlights</a></li>
+            </ul>
+            <!--
+            <ul>
               <li><a><del>Buy tickets</del> <strong class="sold-out">Sold out</strong></a></li>
               <li><a href="https://www.facebook.com/GOODHQ/videos/10154095424128059/">View livestream</a></li>
-              <!--
-              <li><a href="[link to a story about the show]">See highlights</a></li>
-              -->
             </ul>
+            -->
           </div>
         </li>
         <li class="red">
@@ -228,6 +243,7 @@
 
           <div class="action">
             <ul>
+              <li><a href="">Buy tickets</a></li>
               <li><a href="#reminder">Set livestream reminder</a></li>
             </ul>
           </div>
@@ -250,6 +266,7 @@
 
           <div class="action">
             <ul>
+              <li><a href="">Buy tickets</a></li>
               <li><a href="#reminder">Set livestream reminder</a></li>
             </ul>
           </div>
@@ -412,6 +429,32 @@
     var countdown_numbers = document.getElementById('countdown_numbers');
     if (countdown_numbers) countdown_numbers.style.display = 'none';
     */
+  </script>
+
+  <script type="text/javascript">
+    // Replace the placeholder image with a video element, if the link to the video has been pressed
+    (function() {
+
+      // Do we have the features we need?
+      if (!document.body.querySelector || 
+        !document.body.addEventListener || 
+        !document.createDocumentFragment) return;
+
+      var button   = document.querySelector('.shows li > a');
+      var template = document.querySelector('.shows .video-template');
+
+      function addVideo() {
+        template.parentNode.innerHTML = template.innerHTML;
+        button.className += ' hidden-accessible';
+      }
+
+      if (button && template) {
+        button.addEventListener('click', function(e) {
+          addVideo();
+          e.preventDefault();
+        }, false);
+      }
+    })();
   </script>
 </body>
 </html>
