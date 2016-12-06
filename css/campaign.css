@@ -869,27 +869,33 @@ footer {
   color: rgb(153, 153, 153);
   margin: 0;
 }
-.shows .featuring em {
+.shows .featuring em,
+.shows .supporting em {
   font-style: inherit;
 }
 .shows .yellow h3,
-.shows .yellow .featuring em {
+.shows .yellow .featuring em,
+.shows .yellow .supporting em {
   color: rgb(255, 196, 12); /* @yellow */
 }
 .shows .red h3,
-.shows .red .featuring em {
+.shows .red .featuring em,
+.shows .red .supporting em {
   color: rgb(241, 97, 77); /* @red */
 }
 .shows .blue h3,
-.shows .blue .featuring em {
+.shows .blue .featuring em,
+.shows .blue .supporting em {
   color: rgb(0, 84, 206); /* @blue */
 }
 .shows .green h3,
-.shows .green .featuring em {
+.shows .green .featuring em,
+.shows .green .supporting em {
   color: rgb(0, 174, 113); /* @green */
 }
 .shows .pink h3,
-.shows .pink .featuring em {
+.shows .pink .featuring em,
+.shows .pink .supporting em {
   color: rgb(247, 170, 179); /* @pink */
 }
 
