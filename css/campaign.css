@@ -212,8 +212,8 @@ footer,
 body > section + .ad {
   background: black;
   color: white;
-  padding-top: 3em;
-  padding-bottom: 3.75em;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
 }
 body > section + .ad,
 footer {
