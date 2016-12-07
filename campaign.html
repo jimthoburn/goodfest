@@ -143,10 +143,10 @@
 
   <div class="video">
     <div>
-      <!--
       <iframe src="https://www.youtube.com/embed/SNEVxp6tQcE?rel=0&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
-      -->
+      <!--
       <iframe src="https://www.youtube.com/embed/Wd1d_Vl2SfU?rel=0&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
+      -->
 
       <svg viewBox="0 0 352.5 364.5" width="353" height="365" class="shape corner" style="display: none">
         <path fill="rgb(241, 97, 77)" d="M37.8,0.1v330.3h311.8c0,0,21.1-51.3-49.4-59.3c-70.5-8-31.9-52.9-54.4-68.9s-40.2,2.7-69-23
@@ -188,7 +188,7 @@
           <p class="location"><abbr title="at">@</abbr> BAM Cafe, New York City</p>
           <p class="sold-out">Sold out</p>
 
-          <a href="https://www.youtube.com/embed/Wd1d_Vl2SfU" class="play">
+          <a href="https://www.youtube.com/embed/Wd1d_Vl2SfU" class="play" title="Watch the video">
             <h4>Glass Animals</h4>
             <p class="featuring">in a special intimate performance, plus <em>Preservation Hall Jazz Band</em>, <em>Madame Gandhi</em>, <em>Shilpa Ray</em>, and other guests</p>
 
@@ -203,7 +203,7 @@
             <script type="text/template" class="video-template">
               <div class="video">
                 <div>
-                  <iframe src="https://www.youtube.com/embed/Wd1d_Vl2SfU?rel=0&showinfo=0&autohide=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
+                  <iframe src="https://www.youtube.com/embed/Wd1d_Vl2SfU?autoplay=1" frameborder="0" allowfullscreen></iframe>
                 </div>
               </div>
             </script>
@@ -257,7 +257,7 @@
           </div>
 
           <h3><abbr title="December">Dec</abbr> 12</h3>
-          <p class="location"><abbr title="at">@</abbr> Neumo’s, Seattle</p>
+          <p class="location"><abbr title="at">@</abbr> Neumos, Seattle</p>
 
           <h4>D.R.A.M.</h4>
           <p class="featuring">with <em>Hollis Wong-Wear</em> and more</p>
@@ -437,27 +437,33 @@
   </script>
 
   <script type="text/javascript">
-    // Replace the placeholder image with a video element, if the link to the video has been pressed
+    // Replace a show name with a video element, if the link to the video has been pressed
     (function() {
 
       // Do we have the features we need?
-      if (!document.body.querySelector || 
-        !document.body.addEventListener || 
-        !document.createDocumentFragment) return;
+      if (!document.body.querySelectorAll || 
+          !document.body.addEventListener || 
+          !document.createDocumentFragment) return;
 
-      var button   = document.querySelector('.shows li > a');
-      var template = document.querySelector('.shows .video-template');
-
-      function addVideo() {
+      function addVideo(button, template) {
         template.parentNode.innerHTML = template.innerHTML;
         button.className += ' hidden-accessible';
       }
 
-      if (button && template) {
+      function addListener(button, template) {
         button.addEventListener('click', function(e) {
-          addVideo();
+          addVideo(button, template);
           e.preventDefault();
         }, false);
+      }
+
+      var buttons   = document.querySelectorAll('.shows .play');
+      var templates = document.querySelectorAll('.shows .video-template');
+
+      for (var index = 0; index < buttons.length; index++) {
+        if (templates[index]) {
+          addListener(buttons[index], templates[index]);
+        }
       }
     })();
   </script>
