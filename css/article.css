@@ -204,6 +204,16 @@
   top: 10px;
   left: 20px;
 }
+.goodfest-header .return a {
+  display: block;
+}
+.goodfest-header .return svg {
+  display: inline;
+  margin-right: 0.25em;
+}
+.goodfest-header .return svg polygon {
+  fill: currentColor;
+}
 .goodfest-header .return a:hover,
 .goodfest-header .return a:active,
 .goodfest-header .return a:focus {
@@ -234,7 +244,7 @@
 }
 .goodfest-header .countdown {
   position: absolute;
-  top: 20px;
+  top: 58px;
   right: 30px;
 }
 .goodfest-header .countdown .arrow {
@@ -243,7 +253,6 @@
 }
 @media (min-width: 60em) {
   .goodfest-header .countdown {
-    top: 60px;
     width: 300px;
   }
   .goodfest-header-for-shows .countdown {

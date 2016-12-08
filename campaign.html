@@ -467,5 +467,141 @@
       }
     })();
   </script>
+
+  <script type="text/javascript">
+  (function() {
+
+    // As the user scrolls up or down the page, move the shapes in the header
+    // (Only do this while the header is visible)
+
+    // Listen for the scroll event
+    // If the animation track for the shape is visible
+      // Position the shape at position based on the height of the viewport divided by the length of the track
+      // shape position = scroll position / viewport height
+      // For example: 500px / 1000px = 50%
+
+
+    /*
+    var viewportHeight = window.innerHeight;
+    var scrollY = getScrollY();
+    var xStart = 0;
+    var xEnd = 100;
+    var yStart = 0;
+    var yEnd = 0;
+
+    var progress = scrollY / viewportHeight;
+
+    var x = progress * (xEnd - xStart) + xStart;
+    var y = progress * (yEnd - yStart) + yStart;
+    */
+
+    var cloud  = document.querySelector( '.cloud.shape');
+    var sun    = document.querySelector(   '.sun.shape');
+    var corner = document.querySelector('.corner.shape');
+
+    var animationHeight = document.querySelector('.shows').getBoundingClientRect().top + window.innerHeight;
+    console.log('animationHeight: ' + animationHeight);
+
+
+    function initialize() {
+      var timer;
+      window.addEventListener('scroll', function(e) {
+        var scrollY = getScrollY();
+
+        if (scrollY >= 0 && scrollY < animationHeight) {
+          animateByScroll(scrollY);
+        }
+
+      }, false);
+    }
+
+
+    function setShapePosition(shape, x, y) {
+      shape.style.transform = "translate(" + x + "%, " + y + "%)";
+    }
+
+
+    function animateByScroll(scrollY) {
+
+      var propertyStart, propertyDestination, nextXValue, nextYValue, progress, duration;
+      progress = animationHeight - scrollY;
+      duration = animationHeight;
+
+      // Animate the cloud
+      propertyStart = -70;
+      propertyDestination = -50;
+      nextYValue = Math.floor(easeInQuint(progress, propertyStart, propertyDestination - propertyStart, duration));
+      setShapePosition(cloud, 25, nextYValue);
+
+      // Animate the sun
+      propertyStart = -35;
+      propertyDestination = -50;
+      nextXValue = Math.floor(easeInQuint(progress, propertyStart, propertyDestination - propertyStart, duration));
+      setShapePosition(sun, nextXValue, 12);
+
+      // Animate the corner
+      propertyStart = -18.5;
+      propertyDestination = -32.5;
+      nextXValue = Math.floor(easeInQuint(progress, propertyStart, propertyDestination - propertyStart, duration));
+
+      propertyStart = 22.5;
+      propertyDestination = 37.5;
+      nextYValue = Math.floor(easeInQuint(progress, propertyStart, propertyDestination - propertyStart, duration));
+      setShapePosition(corner, nextXValue, nextYValue);
+
+
+      /*
+      console.log('--------------');
+      console.log('beginning: ' + beginning);
+      console.log('mouseY: ' + mouseY);
+      console.log('progress: ' + progress);
+      console.log('nextValue: ' + nextValue);
+      */
+    }
+
+
+    // http://upshots.org/actionscript/jsas-understanding-easing
+    /*
+    @t is the current time (or position) of the tween. This can be seconds or frames, steps, seconds, ms, whatever – as long as the unit is the same as is used for the total time [3].
+    @b is the beginning value of the property.
+    @c is the change between the beginning and destination value of the property.
+    @d is the total time of the tween.
+    */
+    function noEasing (t, b, c, d) {
+      return c * (t / d) + b;
+    }
+
+
+    // http://gsgd.co.uk/sandbox/jquery/easing/
+    function easeOutElastic (t, b, c, d) {
+      var s=1.70158;var p=0;var a=c;
+      if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+      if (a < Math.abs(c)) { a=c; var s=p/4; }
+      else var s = p/(2*Math.PI) * Math.asin (c/a);
+      return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+    }
+
+    function easeInQuint (t, b, c, d) {
+      return c*(t/=d)*t*t*t*t + b;
+    }
+
+    function easeOutQuint (t, b, c, d) {
+      return c*((t=t/d-1)*t*t*t*t + 1) + b;
+    }
+
+    // KUDOS: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY
+    function getScrollY() {
+      var supportPageOffset = window.pageXOffset !== undefined;
+      var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+      return supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+    }
+
+
+    window.addEventListener('load', function() {
+      setTimeout(initialize, 100);
+    }, false);
+
+  })();
+  </script>
 </body>
 </html>
