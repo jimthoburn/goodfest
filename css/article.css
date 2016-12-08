@@ -22,7 +22,7 @@
   height: auto;
 }
 
-.goodfest-shows .action a,
+.goodfest .action a,
 .goodfest-reminder button {
   background: rgb(204, 204, 204);
   padding: 0.75em 1.5em;
@@ -35,19 +35,19 @@
   transition: all 0.2s;
   width: auto;
 }
-.goodfest-shows .action a {
+.goodfest .action a {
   padding: 0.375em 0.75em;
 }
-.goodfest-shows .action a:not([href]) {
+.goodfest .action a:not([href]) {
   cursor: default;
 }
 .goodfest-reminder button {
   font-size: 1.25em;
   cursor: pointer;
 }
-.goodfest-shows .action a[href]:hover,
-.goodfest-shows .action a[href]:active,
-.goodfest-shows .action a[href]:focus,
+.goodfest .action a[href]:hover,
+.goodfest .action a[href]:active,
+.goodfest .action a[href]:focus,
 .goodfest-reminder button:hover,
 .goodfest-reminder button:active,
 .goodfest-reminder button:focus {
@@ -60,35 +60,35 @@
   padding: 0 0.375em;
   transform: rotate(-10deg);
 }
-.goodfest-shows .action ul,
-.goodfest-shows .action li {
+.goodfest .action ul,
+.goodfest .action li {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
 }
-.goodfest-shows .action ul {
+.goodfest .action ul {
   margin-top: 0.375em;
   font-size: 0.75em;
 }
-.goodfest-shows .action li {
+.goodfest .action li {
   display: inline-block;
   margin-right: 0.375em;
   margin-bottom: 0.75em;
 }
-.goodfest-shows .yellow .action a {
+.goodfest .yellow .action a {
   background: rgb(255, 196, 12); /* @yellow */
 }
-.goodfest-shows .red .action a {
+.goodfest .red .action a {
   background: rgb(241, 97, 77); /* @red */
 }
-.goodfest-shows .blue .action a {
+.goodfests .blue .action a {
   background: rgb(0, 84, 206); /* @blue */
   background: rgb(0, 94, 229); /* @light-blue */
 }
-.goodfest-shows .green .action a {
+.goodfest .green .action a {
   background: rgb(0, 174, 113); /* @green */
 }
-.goodfest-shows .pink .action a {
+.goodfest .pink .action a {
   background: rgb(247, 170, 179); /* @pink */
 }
 
