@@ -431,18 +431,23 @@ header dl {
   margin-bottom: 1.5em;
   position: relative;
 }
-@media (min-width: 50em) {
-  .video .cloud {
-    display: block !important;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    transform: translate(25%, -50%);
-    width: 32vw;
-    height: 16vw;
-  }
+
+.introduction {
+  max-width: 100%;
+  overflow-x: hidden;
 }
+
+.video .cloud {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transform: translate(25%, -50%);
+  width: 32vw;
+  height: 16vw;
+}
+
 
 .video .corner {
   display: block !important;
@@ -452,7 +457,7 @@ header dl {
   z-index: -1;
   width: 20vw;
   height: 20vw;
-  transform: translate(-32.5%, 37.5%);
+  transform: translate(-52.5%, 57.5%);
 }
 .video .sun {
   display: block !important;
@@ -710,7 +715,7 @@ footer {
 
 /* =Shows
 ----------------------------------------------- */
-.shows > h2 {
+.shows-introduction > h2 {
   font-size: 2em;
   max-width: 33em;
   margin-left: auto;
@@ -722,7 +727,7 @@ footer {
 }
 
 /* Attempt to keep related words on one line */
-.shows > h2 span {
+.shows-introduction > h2 span {
   display: inline-block;
 }
 @media (min-width: 50em) {
@@ -731,7 +736,7 @@ footer {
   }
 }
 
-.shows > p {
+.shows-introduction > p {
   color: rgb(151, 154, 170);
   max-width: 40em;
   margin-left: auto;
@@ -742,15 +747,15 @@ footer {
   padding-right: 1em;
 }
 @media (min-width: 62.5em) {
-  .shows > h2 {
+  .shows-introduction > h2 {
     font-size: 3em;
   }
-  .shows > p {
+  .shows-introduction > p {
     font-size: 1.25em;
   }
 }
 @media (min-width: 62.5em) and (max-width: 70em) {
-  .shows > h2 {
+  .shows-introduction > h2 {
     margin-top: 2em; /* SHIM: Make space for the video shapes */
   }
 }
@@ -836,7 +841,7 @@ footer {
     }
   }
 }
-@media (min-width: 62.5em) {
+@media (min-width: 75em) {
   .shows ol {
     margin-left: 6em;
     margin-right: 6em;
