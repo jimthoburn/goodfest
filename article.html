@@ -514,32 +514,36 @@
       </svg>
       </a>
     </h1>
-    <p>A livestream festival for good.</p>
+    <p><span>A livestream festival for good.</span> <span>Presented by Pixel, Phone by Google.</span></p>
 
     <div class="countdown">
-      <h2>Next show in</h2>
-      <div>
-        <dl>
-          <dt id="countdown_days">02</dt>
-          <dd>Days</dd>
-        </dl>
-        <dl>
-          <dt id="countdown_hours">42</dt>
-          <dd><abbr title="Hours">Hrs</abbr></dd>
-        </dl>
-        <dl>
-          <dt id="countdown_minutes">06</dt>
-          <dd><abbr title="Minutes">Min</abbr></dd>
-        </dl>
-        <dl>
-          <dt id="countdown_seconds">02</dt>
-          <dd><abbr title="Seconds">Sec</abbr></dd>
-        </dl>
-      </div>
-      <svg viewBox="0 0 12 55.95" width="12" height="56" class="arrow" style="display: none">
-        <line fill="none" stroke="white" stroke-width="2" stroke-miterlimit="10" x1="6" y1="0" x2="6" y2="51.65"></line>
-        <polygon fill="white" points="0,46 6,56 12,46"></polygon>
-      </svg>
+      <a href="https://goodfest.good.is">
+        <h2 id="next_show">Next show in</h2>
+        <div id="countdown_numbers">
+          <dl>
+            <dt id="countdown_days">02</dt>
+            <dd>Days</dd>
+          </dl>
+          <dl>
+            <dt id="countdown_hours">42</dt>
+            <dd><abbr title="Hours">Hrs</abbr></dd>
+          </dl>
+          <dl>
+            <dt id="countdown_minutes">06</dt>
+            <dd><abbr title="Minutes">Min</abbr></dd>
+          </dl>
+          <dl>
+            <dt id="countdown_seconds">02</dt>
+            <dd><abbr title="Seconds">Sec</abbr></dd>
+          </dl>
+        </div>
+        <!--
+        <svg viewBox="0 0 12 55.95" width="12" height="56" class="arrow" style="display: none">
+          <line fill="none" stroke="white" stroke-width="2" stroke-miterlimit="10" x1="6" y1="0" x2="6" y2="51.65"></line>
+          <polygon fill="white" points="0,46 6,56 12,46"></polygon>
+        </svg>
+        -->
+      </a>
     </div>
 
     <!-- Yellow -->
@@ -1160,6 +1164,14 @@
 
   <script type="text/javascript">
     var countdown = GoodfestCountdown(new Date("2016-12-09T18:30:00-05:00")); // December 9, 2016 at 18:30 EST (GMT-5)
+
+    /*
+    var next_show = document.getElementById('next_show');
+    if (next_show) next_show.innerHTML = 'Next show is<br />streaming now';
+
+    var countdown_numbers = document.getElementById('countdown_numbers');
+    if (countdown_numbers) countdown_numbers.style.display = 'none';
+    */
   </script>
 </body>
 

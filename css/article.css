@@ -285,10 +285,7 @@
 .goodfest-header h1 + p span {
   display: inline-block;
 }
-@media (min-width: 60em) {
-  .goodfest-header h1 + p {
-    font-size: 2em;
-  }
+@media (min-width: 40em) {
   @supports (transform: translate(-50%, -50%)) {
     .goodfest-header h1 + p {
       margin: 0;
@@ -297,6 +294,11 @@
       top: 50%;
       transform: translate(-50%, -50%);
     }
+  }
+}
+@media (min-width: 60em) {
+  .goodfest-header h1 + p {
+    font-size: 2em;
   }
 }
 .goodfest-header h2 {
