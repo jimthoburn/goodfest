@@ -176,14 +176,16 @@
 }
 .content-area .goodfest-header,
 .content-area .goodfest-shows,
-.content-area .goodfest-link {
+.content-area .goodfest-link,
+.content-area .goodfest-ad {
   margin-left: -20px;
   margin-right: -20px;
 }
 @media (min-width: 768px) {
   .content-area .goodfest-header,
   .content-area .goodfest-shows,
-  .content-area .goodfest-link {
+  .content-area .goodfest-link,
+  .content-area .goodfest-ad {
     margin-left: -60px;
     margin-right: -60px;
   }
@@ -244,8 +246,11 @@
 }
 .goodfest-header .countdown {
   position: absolute;
-  top: 58px;
+  top: 30px;
   right: 30px;
+}
+.goodfest-header.has-return-link .countdown {
+  top: 58px;
 }
 .goodfest-header .countdown .arrow {
   margin-top: 0.625em;
@@ -258,12 +263,11 @@
   .goodfest-header-for-shows .countdown {
     top: 90px;
   }
+  /*
   .goodfest-header:not(.goodfest-header-for-shows) .countdown .arrow {
     display: inline !important;
   }
-  .goodfest-header-for-shows .countdown {
-    top: 90px;
-  }
+  */
 }
 .goodfest-header .countdown h2 {
   margin-top: 0;
@@ -344,6 +348,7 @@
     background-color: transparent;
     padding: 0;
     position: absolute;
+    z-index: 1;
     right: 30px;
     margin-top: -80px;
   }
@@ -779,176 +784,3 @@
   fill: currentColor;
 }
 
-
-
-/* =Videos
------------------------------------------------ */
-
-.goodfest-videos {
-  background: black;
-  color: white;
-  padding: 20px;
-  margin-left: -20px;
-  margin-right: -20px;
-}
-.goodfest-videos h2 {
-  font-size: inherit;
-}
-.goodfest-videos h2 svg {
-  height: 5em;
-  width: 4.2253521127em; /* 168 / 198.8 * 5em */
-}
-.goodfest-videos h3,
-.goodfest-videos .show-nav,
-.goodfest-videos p {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-@media (min-width: 40em) {
-  .goodfest-videos h3 {
-    font-size: 3em;
-  }
-  .goodfest-videos .about p {
-    font-size: 1.25em;
-  }
-  .goodfest-videos .about .action {
-    font-size: 1.25em;
-  }
-}
-.goodfest-videos .about .action a {
-  padding: 0.75em 1.5em;
-}
-.goodfest-videos h3 span {
-  display: inline-block;
-}
-.goodfest-videos .show-nav {
-  margin-left: -20px;
-  margin-right: -20px;
-  margin-bottom: 0;
-}
-.goodfest-videos .show-nav a {
-  display: inline-block;
-  padding: 1em 20px;
-}
-.goodfest-videos .show-nav a strong {
-  font-weight: inherit;
-  color: black;
-}
-.goodfest-videos .show-nav:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.goodfest-videos .show-nav li {
-  float: left;
-}
-.goodfest-videos .video {
-  margin: 20px -20px -20px !important;
-}
-.goodfest-videos .video > div {
-  max-width: 100%;
-  padding-bottom: 56.25%; /* 720px / 1280px */
-  position: relative;
-}
-.goodfest-videos .video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  border: 0.25em solid black;
-}
-.goodfest-videos .container {
-  padding: 20px;
-  margin-left: -20px;
-  margin-right: -20px;
-  margin-bottom: -20px;
-  color: black;
-}
-.goodfest-videos .container h3 {
-  margin-top: 0;
-}
-.goodfest-videos .container .action a {
-  background-color: white !important;
-  color: black !important;
-}
-.goodfest-videos .yellow {
-  background-color: rgb(255, 196, 12); /* @yellow */
-}
-.goodfest-videos .red {
-  background-color: rgb(241, 97, 77); /* @red */
-}
-.goodfest-videos .blue {
-  background-color: rgb(0, 84, 206); /* @blue */
-}
-.goodfest-videos .green {
-  background-color: rgb(0, 174, 113); /* @green */
-}
-.goodfest-videos .pink {
-  background-color: rgb(247, 170, 179); /* @pink */
-}
-.goodfest-videos .icon {
-  display: inline-block;
-  margin-right: 0.5em;
-  vertical-align: middle;
-}
-.goodfest-videos .icon svg {
-  height: 1em;
-  width: 1em;
-}
-.goodfest-videos .show-nav {
-  margin-top: 50px;
-  float: right;
-}
-.goodfest-videos .show-nav .icon {
-  margin-right: 0;
-}
-@media (max-width: 40em) {
-  .goodfest-videos .show-nav .name {
-    position: absolute;
-    left: -9999px;
-  }
-}
-@media (max-width: 75em) {
-  .goodfest-videos .show-nav .name strong {
-    position: absolute;
-    left: -9999px;
-  }
-}
-.goodfest-videos h2 {
-  float: left;
-}
-
-@media (min-width: 40em) {
-  .goodfest-videos .container:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .goodfest-videos .about {
-    width: 50%;
-    float: left;
-  }
-  .goodfest-videos .video {
-    margin-top: 0 !important;
-    width: 50%;
-    float: right;
-  }
-}
-
-@media (min-width: 768px) {
-  .goodfest-videos .container {
-    padding: 20px 60px 40px;
-  }
-  .goodfest-videos .about {
-    margin-top: 60px;
-  }
-  .goodfest-videos .video {
-    margin: 0 !important;
-  }
-  .content-area .goodfest-videos {
-    margin-left: -60px;
-    margin-right: -60px;
-  }
-}
