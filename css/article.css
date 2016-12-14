@@ -791,7 +791,7 @@
 }
 .goodfest-video-list .video {
   margin: 0 !important; /* SHIM: Override margin intended for other videos on the site */
-  border-top: 2px solid black;
+  border-top: 1px solid black;
   width: 100%;
 }
 
@@ -807,6 +807,12 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+.goodfest-video-list .video {
+  padding-right: 1px;
+}
+.goodfest-video-list .video:last-child {
+  padding-right: 0;
 }
 
 .content-area .goodfest-video-list {
