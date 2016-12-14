@@ -784,3 +784,45 @@
   fill: currentColor;
 }
 
+/* =Video List
+----------------------------------------------- */
+.goodfest-video-list {
+  background: black;
+}
+.goodfest-video-list .video {
+  margin: 0 !important; /* SHIM: Override margin intended for other videos on the site */
+  border-top: 2px solid black;
+  width: 100%;
+}
+
+.goodfest-video-list .video > div {
+  max-width: 100%;
+  padding-bottom: 56.25%; /* 720px / 1280px */
+  position: relative;
+}
+
+.goodfest-video-list .video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content-area .goodfest-video-list {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+@media (min-width: 768px) {
+  .content-area .goodfest-video-list {
+    margin-left: -60px;
+    margin-right: -60px;
+  }
+}
+
+@media (min-width: 600px) {
+  .goodfest-video-list {
+    display: flex;
+  }
+}
+
