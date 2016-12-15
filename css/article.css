@@ -156,9 +156,9 @@
 }
 .goodfest-header .shape.red {
   position: absolute;
-  top: 50%;
   right: 0;
-  transform: translate(50%, -60%);
+  bottom: 10%;
+  transform: translate(50%, 0);
   height: 25vw;
 }
 .goodfest-header .shape.yellow {
