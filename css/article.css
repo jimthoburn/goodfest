@@ -875,6 +875,7 @@
   margin: 0 !important; /* SHIM: Override margin intended for other videos on the site */
   border-top: 1px solid black;
   width: 100%;
+  max-width: 500px;
 }
 
 .goodfest-video-list .video > div {
@@ -909,6 +910,7 @@
   }
   .goodfest-video-list {
     display: flex;
+    justify-content: space-around;
   }
 }
 @media (min-width: 768px) {
@@ -979,6 +981,10 @@
   margin-left: 0;
   padding-left: 0;
 }
+.goodfest-video-link ul {
+  display: flex;
+  flex-wrap: wrap;
+}
 .goodfest-video-link ul:after {
   content: "";
   display: table;
@@ -990,6 +996,7 @@
   box-sizing: border-box;
   padding-right: 1px;
   padding-bottom: 1px;
+  flex-grow: 1;
 }
 .goodfest-video-link li:nth-child(3n+1) {
   clear: both;
@@ -1018,8 +1025,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
+  height: auto;
 }
+@supports(object-fit: cover) {
+  .goodfest-video-link img {
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
 
