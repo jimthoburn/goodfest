@@ -1,0 +1,71 @@
+
+  .goodfest-survey {
+    display: block;
+    text-decoration: none;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 40px 20px 20px;
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .content-area .goodfest-survey {
+      margin-left: -60px;
+      margin-right: -60px;
+      padding: 60px;
+    }
+  }
+  .goodfest-survey-header {
+    border-top: 1px solid rgb(21, 32, 35);
+    text-align: left;
+    font-size: 1.25em;
+  }
+  .goodfest-survey-header span {
+    display: inline-block;
+    background-color: rgb(21, 32, 35);
+    color: white;
+    font-family: 'Trade Gothic W01', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    transform: translate(0, -50%);
+  }
+  .goodfest-survey h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 3em;
+  }
+  .goodfest-survey h2 svg {
+    display: block;
+    margin: 0.25em auto;
+  }
+  .goodfest-survey h3 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -0.5em;
+  }
+  .goodfest-survey h3 svg {
+    display: inline;
+  }
+  .goodfest-survey-action {
+    font-size: 1.5em;
+    display: inline-block;
+    background-color: rgb(21, 32, 35);
+    color: white;
+    padding: 0.625em 1.25em;
+    font-weight: 500;
+  }
+  .goodfest-survey:hover  .goodfest-survey-action,
+  .goodfest-survey:active .goodfest-survey-action,
+  .goodfest-survey:focus  .goodfest-survey-action {
+    background-color: rgb(11, 22, 25);
+  }
+  .goodfest-survey:hover  h3 svg path,
+  .goodfest-survey:active h3 svg path,
+  .goodfest-survey:focus  h3 svg path {
+    fill: white;
+  }
