@@ -38,6 +38,7 @@
   <link rel="stylesheet" href="css/campaign.css" />
 
   <script>
+  /*
   window.GoodfestCountdown = function(timeToCountdownTo) {
     var self = this;
 
@@ -75,6 +76,7 @@
     self.renderTime();
     self.timerInterval = window.setInterval(self.renderTime, 1000);
   };
+  */
   </script>
 </head>
 <body>
@@ -84,7 +86,7 @@
 
 <div class="introduction">
 
-  <header>
+  <header class="without-counter">
     <h1>
       <svg viewBox="0 0 168 198.8" width="144" height="170">
         <switch>
@@ -116,6 +118,7 @@
     </h1>
     <p>A livestream festival for good. <span>Presented by Pixel, Phone by Google.</span></p>
 
+    <!--
     <div class="countdown">
       <h2 id="next_show">Next show in</h2>
       <div id="countdown_numbers">
@@ -141,6 +144,7 @@
         <polygon fill="white" points="0,101.5 6,111.9 12,101.5"></polygon>
       </svg>
     </div>
+    -->
   </header>
 
   <div class="video">
@@ -448,7 +452,7 @@
 
   <script type="text/javascript">
     // var countdown = GoodfestCountdown(new Date("2016-11-29 19:00:00:00 EST")); // This only seems to work in Chrome
-    var countdown = GoodfestCountdown(new Date("2016-12-09T18:30:00-05:00")); // December 9, 2016 at 18:30 EST (GMT-5)
+    //var countdown = GoodfestCountdown(new Date("2016-12-09T18:30:00-05:00")); // December 9, 2016 at 18:30 EST (GMT-5)
     // var countdown = GoodfestCountdown(1476169199);
 
     /*    
