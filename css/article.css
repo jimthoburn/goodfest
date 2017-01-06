@@ -858,11 +858,11 @@
 }
 
 @media (min-width: 600px) {
+  .goodfest-video-list {
+    padding: 0 10px 20px;
+  }
   .goodfest-video-list > div > div {
     padding-top: 0;
-  }
-  .goodfest-video-list > div + div {
-    padding-left: 20px;
   }
   .goodfest-video-list:after {
     content: "";
@@ -870,15 +870,13 @@
     clear: both;
   }
   .goodfest-video-list > div {
-    box-sizing: border-box;
     float: left;
-    width: 33%;
+    width: 33.333%;
+    box-sizing: border-box;
+    padding: 0 10px;
   }
 }
 @media (min-width: 768px) {
-  .goodfest-video-list {
-    padding: 0 20px 20px;
-  }
   .content-area .goodfest-video-list {
     margin-left: -60px;
     margin-right: -60px;
@@ -886,7 +884,7 @@
 }
 @media (min-width: 960px) {
   .goodfest-video-list {
-    padding: 0 60px 40px;
+    padding: 0 50px 40px;
   }
 }
 
