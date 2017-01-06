@@ -863,7 +863,7 @@
   .goodfest-video-list {
     padding: 0 10px 20px;
   }
-  .goodfest-video-list > div > div {
+  .goodfest-video-list > div + div {
     padding-top: 0;
   }
   .goodfest-video-list:after {
