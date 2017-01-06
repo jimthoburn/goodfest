@@ -804,17 +804,6 @@
   padding-left: 0.625em;
   position: relative;
 }
-/*
-.goodfest-link ul::before {
-  content: "";
-  position: absolute;
-  top: 25%;
-  left: 0;
-  width: 2px;
-  height: 50%;
-  background: rgba(0, 0, 0, 0.5);
-}
-*/
 .goodfest-link li {
   display: inline;
   margin-left: 0.375em;
@@ -842,36 +831,12 @@
   fill: currentColor;
 }
 
+
 /* =Video List
 ----------------------------------------------- */
 .goodfest-video-list {
   background: black;
-}
-.goodfest-video-list .video {
-  margin: 0 !important; /* SHIM: Override margin intended for other videos on the site */
-  border-top: 1px solid black;
-  width: 100%;
-  max-width: 500px;
-}
-
-.goodfest-video-list .video > div {
-  max-width: 100%;
-  padding-bottom: 56.25%; /* 720px / 1280px */
-  position: relative;
-}
-
-.goodfest-video-list .video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.goodfest-video-list {
   padding: 0 20px 20px;
-}
-.goodfest-video-list .video + .video {
-  padding-top: 20px;
 }
 
 .content-area .goodfest-video-list {
@@ -879,23 +844,38 @@
   margin-right: -20px;
 }
 
+.goodfest-video-list > div {
+  margin: 0;
+  border-top: 1px solid black;
+  width: 100%;
+}
+
+.goodfest-video-list > div > div {
+  max-width: 100%;
+  padding-bottom: 56.25%; /* 720px / 1280px */
+  position: relative;
+  padding-top: 20px;
+}
+
 @media (min-width: 600px) {
-  .goodfest-video-list .video + .video {
+  .goodfest-video-list > div > div {
     padding-top: 0;
+  }
+  .goodfest-video-list > div + div {
     padding-left: 20px;
   }
-  .goodfest-video-list {
-    display: flex;
-    justify-content: space-around;
+  .goodfest-video-list:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .goodfest-video-list > div {
+    box-sizing: border-box;
+    float: left;
+    width: 33%;
   }
 }
 @media (min-width: 768px) {
-  /*
-  .goodfest-video-list .video + .video {
-    padding-top: 0;
-    padding-left: 1px;
-  }
-  */
   .goodfest-video-list {
     padding: 0 20px 20px;
   }
@@ -910,29 +890,20 @@
   }
 }
 
+.goodfest-video-list iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-/* =Video Link
------------------------------------------------ */
-.content-area .goodfest-video-link {
-  margin-left: -20px;
-  margin-right: -20px;
-}
-@media (min-width: 768px) {
-  .content-area .goodfest-video-link {
-    margin-left: -60px;
-    margin-right: -60px;
-  }
-}
-.goodfest-video-link {
-  position: relative;
-  background: black;
-  color: white;
-  padding-top: 1px;
-}
-.goodfest-video-link a {
+.goodfest-video-list .video-link a {
+  max-width: 768px;
   display: block;
+  position: relative;
 }
-.goodfest-video-link a:before {
+.goodfest-video-list .video-link a:before {
   content: "";
   position: absolute;
   top: 0;
@@ -942,73 +913,48 @@
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-.goodfest-video-link h3 {
+.goodfest-video-list .video-link h3 {
+  color: white;
+  text-align: center;
   position: absolute;
   z-index: 1;
   width: 100%;
-  text-align: center;
   top: 50%;
   line-height: 1;
   margin: -0.5em 0 0;
 }
-.goodfest-video-link ul,
-.goodfest-video-link li {
+.goodfest-video-list .video-link ul,
+.goodfest-video-list .video-link li {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
 }
-.goodfest-video-link ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-.goodfest-video-link ul:after {
+.goodfest-video-list .video-link a:after {
   content: "";
   display: table;
   clear: both;
 }
-.goodfest-video-link li {
-  width: 33.3333333%;
+.goodfest-video-list .video-link li {
+  width: 50%;
   float: left;
   box-sizing: border-box;
+  padding-left: 1px;
   padding-right: 1px;
   padding-bottom: 1px;
-  flex-grow: 1;
 }
-.goodfest-video-link li:nth-child(3n+1) {
+.goodfest-video-list .video-link li:nth-child(2n+1) {
   clear: both;
 }
-@media (min-width: 60em) {
-  .goodfest-video-link li {
-    width: 16.6666666667%;
-  }
-  .goodfest-video-link li:nth-child(3n+1) {
-    clear: none;
-  }
-  .goodfest-video-link li:nth-child(6n+1) {
-    clear: both;
-  }
+.goodfest-video-list .video-link li:first-child {
+  padding-left: 0;
 }
-.goodfest-video-link li:last-child {
+.goodfest-video-list .video-link li:last-child {
   padding-right: 0;
 }
-.goodfest-video-link li > div {
-  max-width: 100%;
-  padding-bottom: 56.25%; /* 720px / 1280px */
-  position: relative;
-}
-.goodfest-video-link img {
-  position: absolute;
-  top: 0;
-  left: 0;
+.goodfest-video-list .video-link img {
+  display: block;
   width: 100%;
   height: auto;
-}
-@supports(object-fit: cover) {
-  .goodfest-video-link img {
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-  }
 }
 
 
