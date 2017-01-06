@@ -849,12 +849,14 @@
   border-top: 1px solid black;
   width: 100%;
 }
+.goodfest-video-list > div + div {
+  padding-top: 20px;
+}
 
 .goodfest-video-list > div > div {
   max-width: 100%;
   padding-bottom: 56.25%; /* 720px / 1280px */
   position: relative;
-  padding-top: 20px;
 }
 
 @media (min-width: 600px) {
