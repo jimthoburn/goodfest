@@ -119,9 +119,19 @@
 .goodfest-video-list .video-link li:last-child {
   padding-right: 0;
 }
-.goodfest-video-list .video-link img {
-  display: block;
-  width: 100%;
-  height: auto;
+.goodfest-video-list .video-link div {
+  padding-bottom: 56.25%; /* 720px / 1280px */
+  position: relative;
 }
-
+.goodfest-video-list .video-link img {
+  position: absolute;
+  display: block;
+  width: auto;
+  height: 100%;
+}
+@supports(object-fit: cover) {
+  .goodfest-video-list .video-link img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
