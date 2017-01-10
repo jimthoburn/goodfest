@@ -9,16 +9,31 @@
     background-size: cover;
     background-image: url(https://assets.goodstatic.com/s3/magazine/images/palms-640wide-d1675bcb23ef3a164a80b7d30247ff461e97f60a.jpg);
     color: white;
-    margin-left: -20px;
-    margin-right: -20px;
     padding: 40px 20px 20px;
     text-align: center;
-    margin-bottom: 36px; /* Same as advertisment padding */
+    margin: 0;
   }
   @media (min-width: 500px) {
    .goodfest-survey {
       background-image: url(https://assets.goodstatic.com/s3/magazine/images/palms-1260wide-d0747241a5d5e01cb8041a2af1cc8fc4ff4d3d4d.jpg);
     }
+  }
+
+  body .goodfest-survey {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    min-height: 80vh;
+    box-sizing: border-box;
+  }
+
+  .content-area .goodfest-survey {
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 36px; /* Same as advertisment padding */
+  }
+
+  .goodfest-survey + .container div.hero.responsive-hero.for-desktop.full.parallax {
+    transform: unset !important;
   }
 
   @media (min-width: 768px) {
