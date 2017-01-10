@@ -1,4 +1,7 @@
 
+
+/* =Elements
+----------------------------------------------- */
 .goodfest {
   font: 100%/1.25 "Proxima Nova W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -20,61 +23,6 @@
 .goodfest-ad img {
   max-width: 100%;
   height: auto;
-}
-
-.goodfest .action a {
-  background: rgb(204, 204, 204);
-  padding: 0.75em 1.5em;
-  text-decoration: none;
-  display: inline-block;
-  box-shadow: 0.375em 0.375em 0 black;
-  border-width: 0;
-  font-size: inherit;
-  font-family: inherit;
-  transition: all 0.2s;
-  width: auto;
-}
-.goodfest .action a {
-  padding: 0.375em 0.75em;
-}
-.goodfest .action a:not([href]) {
-  cursor: default;
-}
-.goodfest .action a[href]:hover,
-.goodfest .action a[href]:active,
-.goodfest .action a[href]:focus {
-  box-shadow: 0 0 0 black;
-}
-.goodfest .action ul,
-.goodfest .action li {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-.goodfest .action ul {
-  margin-top: 0.375em;
-  font-size: 0.75em;
-}
-.goodfest .action li {
-  display: inline-block;
-  margin-right: 0.375em;
-  margin-bottom: 0.75em;
-}
-.goodfest .yellow .action a {
-  background: rgb(255, 196, 12); /* @yellow */
-}
-.goodfest .red .action a {
-  background: rgb(241, 97, 77); /* @red */
-}
-.goodfests .blue .action a {
-  background: rgb(0, 84, 206); /* @blue */
-  background: rgb(0, 94, 229); /* @light-blue */
-}
-.goodfest .green .action a {
-  background: rgb(0, 174, 113); /* @green */
-}
-.goodfest .pink .action a {
-  background: rgb(247, 170, 179); /* @pink */
 }
 
 
