@@ -53,13 +53,6 @@
 .goodfest-reminder button:focus {
   box-shadow: 0 0 0 black;
 }
-.goodfest-shows .sold-out {
-  font-weight: inherit;
-  display: inline-block;
-  background: white;
-  padding: 0 0.375em;
-  transform: rotate(-10deg);
-}
 .goodfest .action ul,
 .goodfest .action li {
   list-style: none;
@@ -103,9 +96,6 @@
   padding-bottom: 3.75em;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeYAAACCCAYAAACTgWs3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4QzZFQjAyNTk3QzQxMUU2QUNGOTg3MkVDNkRDOUVENyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4QzZFQjAyNjk3QzQxMUU2QUNGOTg3MkVDNkRDOUVENyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjBGRTdDN0U4OTdDNDExRTZBQ0Y5ODcyRUM2REM5RUQ3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjhDNkVCMDI0OTdDNDExRTZBQ0Y5ODcyRUM2REM5RUQ3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+F4pkuQAABTVJREFUeNrs3TtrFF0Ax+GJxEsIGAU1RMWooI0WEvULCFpEAzb6BbwUVgoWFgFB0E6ws0i+gHVKQbQVvBRaiRobxQtq4g00up7JpgjDjKhsZmfmPA+cZhd0s5vsL//3XXd7Wq1WAgBUwzJ3AQAIMwAgzAAgzACAMAOAMAMAwgwAwgwACDMACDMAIMwAIMwAgDADAMIMAMIMAAgzAAgzACDMACDMAIAwA4AwAwDCDADCDAAIMwBEprebf/mb4RMd/fOm+saievBO7h6u6k3rD2c6nHU5110L51zlfzCO74zyCWGud7wyt6U1ONGY+3Vm8oDaLLGVo6c79metOnbEYqZx1hdEObVNlAGEuZEmH71wJwAIMzSXtQwIM1YzAMIM1jIgzFjNAAgzWMuAMGM1AyDMYC0DwozVDIAwg7UMCDNWMwDCTK28DeddwXXPrWUAYbaay/UlnKFw1mbOQFKRT5YSZUCYiS3Oc+F8zJxZUQYQZnFGlAFhRpxFGUCYEWdRBoQZcRZlAGFGnEUZOqs/nDU5B2FGnEUZSrYjaf/riQ8557y7R5gRZ1GmMQZO3qrDzdyU/ugUXLfZoyjMiLMoA39l5ehpYUacRRkauZoRZsRZlAFrWZi743A498J5mDm3w1knzqKM1Qzzz2dN+mLGvk0lU31jVb15B8MZKbhu90KgEWUg4rVsMVP71SzKWM0Icw1WM5YyYC0LM1ZzvM4m7TdhyH7M5dOk/TnUYDUTd5itZmu5ZHuS9tsWDmTO9nCGPVpgLVvMWM38s7necXeC1YwwW83Ufi0D1rIwYzVjLVvNHfc8ab82IutnOI89WsJsNWMtI87lSn8jT1+s2JM56ftdTFjLwozVjLUszkQX5SjCbDVbyyDOoizMWM1Yy4izKAtzxVfz5z9cN+PHz1oGcRbl+ec7D31proRzM2m/mGKx2XAeuHuwllkc55nJA6IcqWj+U3YFVvPXcO4k7U+RWnzuexqylsFyFuXowlyROIO1jDiLsjCLs7W8xN4UXP79D9eBOIuyMIszS+RCOFvD2ZY5Q+G8tJYRZ1EWZnGmXL+S9rsmTWfOe1FGnEVZmMUZRFmcRVmYxRlEGXEWZWEWZxBlcRZlYRZnEGXEWZSFWZxBlKl9nCsU5S3hHM05I92+Yd6SMyfOU31j7ghEmdrEOfa37/xP6WdMH8q5/Ec4K2JezHfD+ZhzrlrOIMoVMF7wHPUonD53T23X8vzNKbh8ebdvWLfDvD/9hS/n7PUtDHFHuef1qSrcjH0Fz1G7whms0mqmOfw/ZqsZUYbY1rIwA6Jc49VcC1azMFvNIMpgLQszEFuUrWarWZixmhFlsJaFGRBlq9lqRpitZkQZrGVhBkTZaraaEWarGVEGa1mYAVG2mq1m/p4PsfjH1ewDLhBlaMRavlFw+ZPYw5y+GfyanMvf+daGykY5fZP//sxlP8P5VNZqbg1OlPW1vi24/Gs4H+qwmn3yVKHrC8diztgaztqcy19ZzYhyJaO8YWFRrM657mI4lxr2MJwJ53LO5TMLBxoXZt/cUC8bC6Kc2t7Arzf9bN5pDztl8uIvsJZrx4vAEGYAQJjBWsZqRpgBAGEGrGWrGYQZAIQZsJatZhBmABBmwFq2mkGYAUCYAWvZagZhBsrzMpzZguueuXugA79ktlot9wIAWMwAgDADgDADAMIMAMIMAAgzAAgzACDMACDMAIAwA4AwAwDCDADCDAAIMwAgzAAgzACAMAOAMAMAwgwAwgwACDMACDMAIMwAIMwAQFf8FmAARkd54Me/JFgAAAAASUVORK5CYII=);
   background-size: 243px auto;
-}
-.goodfest-shows + .goodfest-ad {
-  margin-top: 60px;
 }
 .goodfest-ad h2 {
   margin-top: 0;
@@ -175,7 +165,6 @@
   }
 }
 .content-area .goodfest-header,
-.content-area .goodfest-shows,
 .content-area .goodfest-link,
 .content-area .goodfest-ad {
   margin-left: -20px;
@@ -183,7 +172,6 @@
 }
 @media (min-width: 768px) {
   .content-area .goodfest-header,
-  .content-area .goodfest-shows,
   .content-area .goodfest-link,
   .content-area .goodfest-ad {
     margin-left: -60px;
@@ -573,160 +561,6 @@
 }
 .goodfest-social li svg path {
   fill: currentColor;
-}
-
-/* =Shows
------------------------------------------------ */
-.goodfest-shows {
-  padding-bottom: 20px;
-}
-@media (min-width: 800px) {
-  .goodfest-shows {
-    font-size: 1.25em;
-  }
-}
-@media (min-width: 1200px) {
-  .goodfest-shows {
-    font-size: 1.5em;
-  }
-}
-.goodfest-header + .goodfest-shows {
-  margin-top: 50px;
-}
-.goodfest-shows ol,
-.goodfest-shows li {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-.goodfest-shows ol > li {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-@media (min-width: 800px) {
-  .goodfest-shows ol:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .goodfest-shows ol > li {
-    float: left;
-    width: 50%;
-    box-sizing: border-box;
-  }
-  .goodfest-shows ol > li:nth-child(2n) {
-    float: right;
-  }
-  .goodfest-shows ol > li:nth-child(2n+1) {
-    clear: both;
-  }
-}
-@media (min-width: 62.5em) {
-  .goodfest-shows {
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-}
-@media (min-width: 80em) {
-  .goodfest-shows ol {
-    margin-left: 150px;
-    margin-right: 150px;
-  }
-}
-@media (min-width: 100em) {
-  .goodfest-shows ol {
-    margin-left: 200px;
-    margin-right: 200px;
-  }
-}
-.goodfest-shows h2 {
-  font-weight: 500;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
-}
-.goodfest-shows h2 span {
-  display: inline-block;
-}
-.goodfest-shows h3 {
-  font-weight: normal;
-  text-transform: uppercase;
-}
-.goodfest-shows h3,
-.goodfest-shows .location {
-  display: inline;
-  font-size: inherit;
-  line-height: inherit;
-}
-.goodfest-shows h3:after {
-  content: ' / '
-}
-.goodfest-shows h5 {
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: 0.875em;
-}
-.goodfest-shows ol > li {
-  margin-top: 1.5em;
-}
-.goodfest-shows h3 {
-  color: rgb(153, 153, 153);
-}
-.goodfest-shows .yellow h3 {
-  color: rgb(255, 196, 12); /* @yellow */
-}
-.goodfest-shows .red h3 {
-  color: rgb(241, 97, 77); /* @red */
-}
-.goodfest-shows .blue h3 {
-  color: rgb(0, 84, 206); /* @blue */
-}
-.goodfest-shows .green h3 {
-  color: rgb(0, 174, 113); /* @green */
-}
-.goodfest-shows .pink h3 {
-  color: rgb(247, 170, 179); /* @pink */
-}
-
-.goodfest-shows header {
-  border-bottom: 3px solid black;
-  padding-bottom: 0.375em;
-  margin-bottom: 0.375em;
-}
-.goodfest-shows img {
-  float: left;
-  margin-top: 0.375em;
-  border-radius: 0.25em;
-  width: 2.5em; /* 40px / 16px */
-  height: 5em; /* 80px / 16px */
-}
-.goodfest-shows ol > li > div {
-  margin-left: 5em; /* 80px / 16px */
-}
-.goodfest-shows h4 {
-  margin: 0;
-  font-family: "Cactus W00", "Trade Gothic W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 3em;
-  line-height: 1;
-  text-transform: uppercase;
-}
-.goodfest-shows .artist.coming-soon {
-  color: rgb(153, 153, 153);
-}
-.goodfest-shows .yellow h4 {
-  color: rgb(255, 196, 12); /* @yellow */
-}
-.goodfest-shows .red h4 {
-  color: rgb(241, 97, 77); /* @red */
-}
-.goodfest-shows .blue h4 {
-  color: rgb(0, 84, 206); /* @blue */
-}
-.goodfest-shows .green h4 {
-  color: rgb(0, 174, 113); /* @green */
-}
-.goodfest-shows .pink h4 {
-  color: rgb(247, 170, 179); /* @pink */
 }
 
 /* =Link
