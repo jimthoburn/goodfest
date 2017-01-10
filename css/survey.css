@@ -19,13 +19,6 @@
     }
   }
 
-  body .goodfest-survey {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    min-height: 80vh;
-    box-sizing: border-box;
-  }
-
   .content-area .goodfest-survey {
     margin-left: -20px;
     margin-right: -20px;
@@ -37,10 +30,12 @@
   }
 
   @media (min-width: 768px) {
+    .goodfest-survey {
+      padding: 60px;
+    }
     .content-area .goodfest-survey {
       margin-left: -60px;
       margin-right: -60px;
-      padding: 60px;
     }
   }
   .goodfest-survey-header {
