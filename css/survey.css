@@ -25,6 +25,8 @@
     margin-bottom: 36px; /* Same as advertisment padding */
   }
 
+  /* SHIM: Disable parallax if the survey appears before the content */
+  .goodfest-survey + .container div.hero.responsive-hero.for-desktop.parallax,
   .goodfest-survey + .container div.hero.responsive-hero.for-desktop.full.parallax {
     transform: unset !important;
   }
