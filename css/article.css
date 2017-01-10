@@ -22,8 +22,7 @@
   height: auto;
 }
 
-.goodfest .action a,
-.goodfest-reminder button {
+.goodfest .action a {
   background: rgb(204, 204, 204);
   padding: 0.75em 1.5em;
   text-decoration: none;
@@ -41,16 +40,9 @@
 .goodfest .action a:not([href]) {
   cursor: default;
 }
-.goodfest-reminder button {
-  font-size: 1.25em;
-  cursor: pointer;
-}
 .goodfest .action a[href]:hover,
 .goodfest .action a[href]:active,
-.goodfest .action a[href]:focus,
-.goodfest-reminder button:hover,
-.goodfest-reminder button:active,
-.goodfest-reminder button:focus {
+.goodfest .action a[href]:focus {
   box-shadow: 0 0 0 black;
 }
 .goodfest .action ul,
@@ -165,14 +157,12 @@
   }
 }
 .content-area .goodfest-header,
-.content-area .goodfest-link,
 .content-area .goodfest-ad {
   margin-left: -20px;
   margin-right: -20px;
 }
 @media (min-width: 768px) {
   .content-area .goodfest-header,
-  .content-area .goodfest-link,
   .content-area .goodfest-ad {
     margin-left: -60px;
     margin-right: -60px;
@@ -398,271 +388,6 @@
     right: 30px;
     margin-top: -80px;
   }
-}
-
-
-/* =Reminder
------------------------------------------------ */
-.goodfest-reminder,
-.goodfest-social {
-  padding: 1.5em;
-}
-.goodfest-reminder,
-.goodfest-social {
-  background-color: rgb(247, 170, 179); /* @pink */
-  color: black;
-}
-.goodfest-social .message,
-.goodfest-reminder form {
-  max-width: 33em;
-  margin-left: auto;
-  margin-right: auto;
-}
-.goodfest-social h2,
-.goodfest-reminder h2 {
-  font-size: 1.875em;
-  font-weight: 500;
-  max-width: 12em;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  margin-bottom: 20px;
-}
-/* SHIM: Attempt to make line a line break after “Get updates” */
-@media (min-width: 30em) {
-    .goodfest-reminder h2 {
-        max-width: 7em;
-    }
-}
-.goodfest-reminder h3 {
-  margin-bottom: 0;
-}
-.goodfest-reminder .email {
-  margin-top: 3em;
-  margin-bottom: 0;
-}
-.goodfest-reminder .email label > span:first-child {
-  display: block;
-  margin-bottom: 0.375em;
-}
-.goodfest-reminder .email label br {
-  display: none;
-}
-.goodfest-reminder .checkbox {
-  margin-top: 0.375em;
-}
-.goodfest-reminder form {
-  border-width: 1px 0;
-  border-style: solid;
-  padding-bottom: 1.25em;
-  padding-right: 1.25em;
-  padding-left: 1.25em;
-}
-.goodfest-reminder input[type="text"],
-.goodfest-reminder input[type="email"] {
-  font-size: inherit;
-  font-family: inherit;
-  padding: 0.75em;
-  border-width: 0;
-  width: 100%;
-  box-sizing: border-box;
-}
-.goodfest-reminder input[type="checkbox"] {
-  font-size: inherit;
-}
-.goodfest-reminder .submit {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: right;
-}
-.goodfest-reminder button {
-  background: white;
-  color: black;
-}
-@media (min-width: 60em) {
-  .goodfest-social h2 {
-    font-size: 3.5em;
-  }
-  .goodfest-reminder h2 {
-    font-size: 4.5em;
-  }
-}
-
-/* =Social
------------------------------------------------ */
-.goodfest-social .message h2 {
-  margin-bottom: 0;
-}
-.goodfest-social .message {
-  margin-top: 0;
-  text-align: center;
-  margin-bottom: 1.25em;
-}
-.goodfest-social .message label > span:first-child {
-  color: white;
-}
-.goodfest-social .message textarea {
-  margin: 1.25em 0 0 0;
-  font-size: inherit;
-  font-family: inherit;
-  padding: 0;
-  border: 2px solid;
-  background: transparent;
-  padding: 0.625em 1.25em;
-  width: 100%;
-  box-sizing: border-box;
-  line-height: 1.25;
-  min-height: 6.5em;
-  text-align: center;
-}
-@media (min-width: 40em) {
-  .goodfest-social .message textarea {
-    font-size: 1.125em;
-    min-height: 5.25em;
-  }
-}
-.goodfest-social ul,
-.goodfest-social li {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-.goodfest-social ul {
-  text-align: center;
-  margin-bottom: 3em;
-}
-.goodfest-social li {
-  display: inline;
-  margin-left: 0.375em;
-  margin-right: 0.375em;
-  font-size: 1.5em;
-}
-@media (min-width: 60em) {
-  .goodfest-social li {
-    margin-left: 1.5em;
-    margin-right: 1.5em;
-  }
-}
-.goodfest-social li a {
-  display: inline-block;
-  padding: 0.75em;
-  background: black;
-  color: white;
-  border-radius: 50%;
-  transition: all 0.2s;
-}
-.goodfest-social li a:hover,
-.goodfest-social li a:active,
-.goodfest-social li a:focus {
-  background-color: rgb(0, 84, 206); /* @blue */
-}
-.goodfest-social li svg {
-  display: block;
-}
-.goodfest-social li svg path {
-  fill: currentColor;
-}
-
-/* =Link
------------------------------------------------ */
-.goodfest-link > div {
-  background: black;
-  color: white;
-  padding: 20px;
-  box-sizing: border-box;
-}
-@supports (transform: translate(20px, -100%)) {
-  @media (min-width: 62.5em) {
-    .goodfest-link {
-      margin-left: 100px;
-      margin-right: 100px;
-    }
-    .goodfest-link > div {
-      margin-top: -26px;
-      width: 40%;
-      margin-left: 50%;
-      transform: translate(20px, -100%);
-    }
-  }
-  @media (min-width: 80em) {
-    .goodfest-link > div {
-      margin-top: -52px;
-    }
-  }
-}
-@media (min-width: 80em) {
-  .goodfest-link {
-    margin-left: 150px;
-    margin-right: 150px;
-  }
-}
-@media (min-width: 100em) {
-  .goodfest-link {
-    margin-left: 200px;
-    margin-right: 200px;
-  }
-}
-.goodfest-link h2 {
-  font-size: 1.5em;
-  font-weight: 500;
-}
-.goodfest-link h2 + p {
-  font-size: 1.5em;
-}
-.goodfest-link h2 + p {
-  margin-bottom: 0.625em;
-}
-.goodfest-link h2 + p + p {
-  font-size: 1.25em;
-  display: inline-block;
-}
-.goodfest-link a {
-  text-decoration: underline;
-  text-shadow: none !important;
-  color: inherit !important;
-  background: transparent !important;
-}
-.goodfest-link ul,
-.goodfest-link li {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-.goodfest-link ul {
-  display: inline-block;
-  margin-top: -0.5em;
-  float: right;
-  font-size: 0.75em;
-  vertical-align: middle;
-  margin-left: 0.625em;
-  padding-left: 0.625em;
-  position: relative;
-}
-.goodfest-link li {
-  display: inline;
-  margin-left: 0.375em;
-  margin-right: 0.375em;
-}
-.goodfest-link li a {
-  display: inline-block;
-  padding: 0.625em;
-  background: white !important;
-  color: black !important;
-  border-radius: 50%;
-  transition: all 0.2s;
-}
-.goodfest-link li a:hover,
-.goodfest-link li a:active,
-.goodfest-link li a:focus {
-  background-color: rgb(0, 84, 206) !important; /* @blue */
-}
-.goodfest-link li svg {
-  display: block;
-  width: 1.5em;
-  height: 1.5em;
-}
-.goodfest-link li svg path {
-  fill: currentColor;
 }
 
 
