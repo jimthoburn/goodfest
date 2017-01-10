@@ -1,0 +1,59 @@
+
+/* =Video Page
+----------------------------------------------- */
+.goodfest-video-page-list {
+  background: black;
+  color: white;
+  padding: 1px 20px 60px;
+}
+@media (min-width: 768px) {
+  .goodfest-video-page-list {
+    padding: 1px 60px 10em;
+  }
+}
+.goodfest-video-page-list ul {
+  margin: 0 auto;
+}
+.goodfest-video-page-list li {
+  max-width: 32em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.goodfest-video-page-list .video {
+  margin: 1.25em 0 0.625em;
+}
+.goodfest-video-page-list .video > div {
+  max-width: 100%;
+  padding-bottom: 56.25%; /* 720px / 1280px */
+  position: relative;
+}
+.goodfest-video-page-list .video img,
+.goodfest-video-page-list .video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.goodfest-video-page-list .video img {
+  object-fit: cover;
+  object-position: top;
+}
+@media (min-width: 60em) {
+  .goodfest-video-page-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .goodfest-video-page-list li {
+    width: 48%;
+    max-width: none;
+    margin: 0em 1% 0 1%;
+  }
+}
+@media (min-width: 100em) {
+  .goodfest-video-page-list li {
+    width: 30%;
+    margin: 1.25em 1.66665% 0 1.66665%;
+  }
+}
